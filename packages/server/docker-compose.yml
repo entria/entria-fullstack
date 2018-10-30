@@ -1,0 +1,20 @@
+version: '2'
+services:
+    graph-api:
+        build: .
+        depends_on:
+            - mongo
+        links:
+            - mongo
+        environment:
+            NODE_ENV: development
+            MONGO_URL: mongodb://mongo/database
+        ports:
+            - "5000:5000"
+        volumes:
+            - "./src:/app/src"
+            - "./dist:/app/dist"
+        entrypoint: "npm run watch"
+
+    mongo:
+        image: mongo

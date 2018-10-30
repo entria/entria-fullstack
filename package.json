@@ -1,0 +1,35 @@
+{
+  "name": "@entria/fullstack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.4.3",
+    "@commitlint/cli": "6.0.5",
+    "@commitlint/config-conventional": "6.0.4",
+    "@babel/node": "7.0.0",
+    "babel-jest": "^23.6.0",
+    "danger": "^4.0.1",
+    "jest": "^23.6.0"
+  },
+  "pre-commit": "lint:staged",
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote true --trailing-comma all --print-width 100",
+      "yarn jest:lint",
+      "git add"
+    ]
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/eslint",
+      "**/jest",
+      "**/babel-jest",
+      "**/@babel/parser"
+    ]
+  }
+}

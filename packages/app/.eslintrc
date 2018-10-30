@@ -1,0 +1,33 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "plugins": [
+    "react",
+    "react-native",
+    "flowtype",
+    "import"
+  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "rules": {
+    "comma-dangle": [2, "always-multiline"],
+    "quotes": [2, "single", { "allowTemplateLiterals": true }],
+    "react/prop-types": 0,
+    "react/jsx-no-bind": 0,
+    "react/display-name": 0,
+    "new-cap": 0,
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2,
+    "react-native/no-inline-styles": 1,
+    "react-native/no-color-literals": 0,
+    "no-class-assign": 1,
+    "no-console": 1,
+    "object-curly-spacing": [1, "always"],
+    "flowtype/define-flow-type": 1,
+    "flowtype/use-flow-type": 1,
+    "import/first": 2
+  }
+}

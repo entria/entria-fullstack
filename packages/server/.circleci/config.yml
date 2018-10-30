@@ -1,0 +1,89 @@
+aliases:
+  # Cache Management
+  - &restore-yarn-cache
+    keys:
+      - v0-yarn-cache
+  - &save-yarn-cache
+    paths:
+      - ~/.cache/yarn
+    key: v0-yarn-cache
+
+  - &restore-mongodb-binaries-cache
+    keys:
+      - v0-mongodb-binaries
+  - &save-mongodb-binaries-cache
+    paths:
+      - ~/.mongodb-binaries
+    key: v0-mongodb-binaries
+
+  - &restore-node-modules-cache
+    keys:
+      - v0-node-modules-{{ checksum "yarn.lock" }}
+  - &save-node-modules-cache
+    paths:
+      - node_modules
+    key: v0-node-modules-{{ checksum "yarn.lock" }}
+
+  # commands
+  - &yarn
+    name: Install Dependencies
+    command: yarn install --frozen-lockfile --production=false --non-interactive --cache-folder ~/.cache/yarn
+  - &lint
+    |
+      yarn jest:lint
+  - &flow
+    |
+      yarn flow-log || true
+  - &test
+    name: Run Tests
+    command: |
+      yarn jest --maxWorkers=4 --coverage --forceExit --ci
+      bash <(curl -s https://codecov.io/bash)
+
+  # Job Filters
+
+  # Run only for not master branches
+  - &filter-only-not-master
+    branches:
+      ignore:
+        - master
+  # runs only for master, and no tags
+  - &filter-only-master
+    branches:
+      only:
+        - master
+
+defaults: &defaults
+  working_directory: ~/app
+  docker:
+    - image: entria/node-ci:0.1.4
+    - image: circleci/redis:4.0.9
+
+version: 2
+jobs:
+  # Job run for every commit in a branch different from master
+  verify_pr:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache: *restore-yarn-cache
+      - restore-cache: *restore-node-modules-cache
+      - run: *yarn
+      - save_cache: *save-node-modules-cache
+      - save_cache: *save-yarn-cache
+      - run: *lint
+      - run: *flow
+      - restore_cache: *restore-mongodb-binaries-cache
+      - run: *test
+      - save_cache: *save-mongodb-binaries-cache
+      - store_artifacts:
+          path: ./flow.log
+      - store_test_results:
+          path: ./test-results
+
+workflows:
+  version: 2
+  full:
+    jobs:
+      - verify_pr:
+          filters: *filter-only-not-master

@@ -1,0 +1,38 @@
+node_modules
+**/node_modules
+npm-debug.log
+.DS_Store
+dist
+build
+.idea
+yarn-error.log
+.cache
+.vs/
+
+# IDE/Editor GraphQL Extensions
+graphql.*.json
+.gqlconfig
+
+.env
+
+# Relay modern
+__generated__/
+
+# Flow log
+flow.log
+
+# Jest junit file
+coverage
+junit.xml
+
+# Random things to ignore
+ignore/
+package-lock.json
+yarn-offline-cache
+
+hard-source-cache/
+**/hard-source-cache/
+
+# Cypress
+cypress/videos
+cypress/screenshots
