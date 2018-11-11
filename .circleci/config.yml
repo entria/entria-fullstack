@@ -120,12 +120,12 @@ workflows:
       - install_deps
       - verify_pr:
           filters: *filter-only-not-master
-          require:
+          requires:
             - install_deps
       - build_server:
           filters: *filter-only-master-and-tags
-          require:
+          requires:
             - install_deps
       - check_changes:
-          require:
+          requires:
             - install_deps
