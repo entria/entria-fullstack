@@ -119,6 +119,7 @@ jobs:
   check_changes:
     <<: *defaults
     steps:
+      - checkout
       - run: *check-changes
 
 workflows:
