@@ -1,7 +1,7 @@
 # Entria FullStack Boilerplate
 
 - [ ] lerna
-- [ ] eslint
+- [x] eslint
 - [ ] flow and ts (migrating to ts)
 - [ ] jest
 - [ ] CI (CircleCI)
