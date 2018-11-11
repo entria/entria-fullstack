@@ -2,7 +2,7 @@
 # Check CIRCLE_COMPARE_URL first and if its not set, check for diff with master.
 
 echo "CIRCLE_COMPARE_URL":
-echo $CIRCLE_COMPARE_URL
+echo "$CIRCLE_COMPARE_URL"
 
 if [[ ! -z "$CIRCLE_COMPARE_URL" ]]; then
     # CIRCLE_COMPARE_URL is not empty, use it to get the diff

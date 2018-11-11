@@ -77,35 +77,28 @@ defaults: &defaults
 
 version: 2
 jobs:
-  # Job run for every commit in a branch different from master
+  install_deps:
+    <<: *defaults
+    steps:
+    - checkout
+    - restore_cache: *restore-yarn-cache
+    - restore-cache: *restore-node-modules-cache
+    - run: *yarn
+    - save_cache: *save-node-modules-cache
+    - save_cache: *save-yarn-cache
+    - persist_to_workspace:
+        root: .
+        paths: .
+
   verify_pr:
     <<: *defaults
     steps:
-      - checkout
-      - restore_cache: *restore-yarn-cache
-      - restore-cache: *restore-node-modules-cache
-      - run: *yarn
-      - save_cache: *save-node-modules-cache
-      - save_cache: *save-yarn-cache
       - run: *lint
       - restore_cache: *restore-mongodb-binaries-cache
       - run: *test
       - save_cache: *save-mongodb-binaries-cache
       - store_test_results:
           path: ./test-results
-
-  install_deps:
-    <<: *defaults
-    steps:
-      - checkout
-      - restore_cache: *restore-yarn-cache
-      - restore-cache: *restore-node-modules-cache
-      - run: *yarn
-      - save_cache: *save-node-modules-cache
-      - save_cache: *save-yarn-cache
-      - persist_to_workspace:
-          root: .
-          paths: .
 
   build_server:
     <<: *defaults
@@ -126,11 +119,16 @@ workflows:
   version: 2
   full:
     jobs:
+      - install_deps
       - verify_pr:
           filters: *filter-only-not-master
-      - install_deps:
-          filters: *filter-only-master-and-tags
+          require:
+            - install_deps
       - build_server:
           filters: *filter-only-master-and-tags
-      - check_changes
+          require:
+            - install_deps
+      - check_changes:
+          require:
+            - install_deps
 
