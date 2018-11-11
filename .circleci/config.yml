@@ -28,9 +28,8 @@ aliases:
   - &yarn
     name: Install Dependencies
     command: yarn install --frozen-lockfile --production=false --non-interactive --cache-folder ~/.cache/yarn
-  - &lint
-    |
-      yarn jest:lint
+  - &lint |
+    yarn jest:lint
   - &test
     name: Run Tests
     command: |
@@ -64,10 +63,10 @@ aliases:
   - &filter-only-master-and-tags
     tags:
       only:
-      - /.*/
+        - /.*/
     branches:
       only:
-      - master
+        - master
 
 defaults: &defaults
   working_directory: ~/app
@@ -80,15 +79,15 @@ jobs:
   install_deps:
     <<: *defaults
     steps:
-    - checkout
-    - restore_cache: *restore-yarn-cache
-    - restore-cache: *restore-node-modules-cache
-    - run: *yarn
-    - save_cache: *save-node-modules-cache
-    - save_cache: *save-yarn-cache
-    - persist_to_workspace:
-        root: .
-        paths: .
+      - checkout
+      - restore_cache: *restore-yarn-cache
+      - restore-cache: *restore-node-modules-cache
+      - run: *yarn
+      - save_cache: *save-node-modules-cache
+      - save_cache: *save-yarn-cache
+      - persist_to_workspace:
+          root: .
+          paths: .
 
   verify_pr:
     <<: *defaults
@@ -107,7 +106,6 @@ jobs:
           at: ~/app
       - setup_remote_docker
       - run: *build_docker_image_server
-
 
   check_changes:
     <<: *defaults
@@ -131,4 +129,3 @@ workflows:
       - check_changes:
           require:
             - install_deps
-
