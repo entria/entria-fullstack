@@ -1,4 +1,7 @@
+const { workspaces = [] } = require('./package.json');
+
 module.exports = {
+  babelrcRoots: workspaces.packages || workspaces,
   presets: [
     '@babel/preset-flow',
     [
@@ -20,7 +23,7 @@ module.exports = {
   ],
   overrides: [
     {
-      test: ['./src/**/*.ts'],
+      test: ['./packages/**/*.ts'],
       presets: [
         '@babel/preset-typescript',
         [
