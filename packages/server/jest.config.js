@@ -27,8 +27,10 @@ module.exports = {
     ],
   ],
   transform: {
-    '^.+\\.js?$': '<rootDir>/node_modules/babel-jest',
-    '^.+\\.ts?$': '<rootDir>/node_modules/babel-jest',
+    // '^.+\\.(js|ts|tsx)?$': 'babel-jest',
+    // '^.+\\.(js|ts|tsx)?$': '<rootDir>/node_modules/babel-jest',
+    // '^.+\\.(js|ts|tsx)?$': '<rootDir>/../../node_modules/babel-jest',
+    '^.+\\.(js|ts|tsx)?$': '<rootDir>/test/babel-transformer',
   },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(js?|ts?)$',
   moduleFileExtensions: ['ts', 'js'],
