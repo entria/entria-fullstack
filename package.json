@@ -80,6 +80,9 @@
   "workspaces": {
     "packages": [
       "packages/*"
+    ],
+    "nohoist": [
+      "**/react-native"
     ]
   }
 }
