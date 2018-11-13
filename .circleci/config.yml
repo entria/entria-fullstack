@@ -28,17 +28,24 @@ aliases:
   - &yarn
     name: Install Dependencies
     command: yarn install --frozen-lockfile --production=false --non-interactive --cache-folder ~/.cache/yarn
-  - &lint
-    |
-      yarn jest:lint
-  - &flow
-    |
-      yarn flow-log || true
+  - &lint |
+    yarn jest:lint
   - &test
     name: Run Tests
     command: |
       yarn jest --maxWorkers=4 --coverage --forceExit --ci
       bash <(curl -s https://codecov.io/bash)
+  - &check-changes
+    name: Check changes
+    command: |
+      .circleci/check_changes.sh
+  - &build_docker_image_server
+    name: Build the Docker image
+    command: |
+      docker build --rm=false \
+        -f ./packages/server/Dockerfile \
+       -t $IMAGE_NAME_SERVER .
+      docker images
 
   # Job Filters
 
@@ -52,6 +59,14 @@ aliases:
     branches:
       only:
         - master
+  # Run only for master and tags
+  - &filter-only-master-and-tags
+    tags:
+      only:
+        - /.*/
+    branches:
+      only:
+        - master
 
 defaults: &defaults
   working_directory: ~/app
@@ -61,8 +76,7 @@ defaults: &defaults
 
 version: 2
 jobs:
-  # Job run for every commit in a branch different from master
-  verify_pr:
+  install_deps:
     <<: *defaults
     steps:
       - checkout
@@ -71,19 +85,47 @@ jobs:
       - run: *yarn
       - save_cache: *save-node-modules-cache
       - save_cache: *save-yarn-cache
+      - persist_to_workspace:
+          root: .
+          paths: .
+
+  verify_pr:
+    <<: *defaults
+    steps:
       - run: *lint
-      - run: *flow
       - restore_cache: *restore-mongodb-binaries-cache
       - run: *test
       - save_cache: *save-mongodb-binaries-cache
-      - store_artifacts:
-          path: ./flow.log
       - store_test_results:
           path: ./test-results
+
+  build_server:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/app
+      - setup_remote_docker
+      - run: *build_docker_image_server
+
+  check_changes:
+    <<: *defaults
+    steps:
+      - checkout
+      - run: *check-changes
 
 workflows:
   version: 2
   full:
     jobs:
+      - install_deps
       - verify_pr:
           filters: *filter-only-not-master
+          requires:
+            - install_deps
+      - build_server:
+          filters: *filter-only-master-and-tags
+          requires:
+            - install_deps
+      - check_changes:
+          requires:
+            - install_deps

@@ -36,6 +36,7 @@
     "@types/koa-router": "^7.0.31",
     "@types/mongoose": "^5.2.11",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
     "danger": "^4.0.1",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -82,8 +83,7 @@
       "packages/*"
     ],
     "nohoist": [
-      "**/react-native",
-      "**/react"
+      "**/react-native"
     ]
   }
 }
