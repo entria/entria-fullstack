@@ -4,7 +4,7 @@ const NodeEnvironment = require('jest-environment-node');
 
 class MongoDbEnvironment extends NodeEnvironment {
   constructor(config) {
-    // console.error('\n# MongoDB Environment Constructor #\n');
+    console.error('\n# MongoDB Environment Constructor #\n');
     super(config);
     this.mongod = new MongodbMemoryServer.default({
       instance: {
@@ -22,7 +22,7 @@ class MongoDbEnvironment extends NodeEnvironment {
 
   async setup() {
     await super.setup();
-    // console.error('\n# MongoDB Environment Setup #\n');
+    console.error('\n# MongoDB Environment Setup #\n');
     await this.mongod.start();
     this.global.__MONGO_URI__ = await this.mongod.getConnectionString();
     this.global.__MONGO_DB_NAME__ = await this.mongod.getDbName();

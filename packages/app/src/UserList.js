@@ -157,7 +157,7 @@ const UserListPaginationContainer = createPaginationContainer(
 );
 
 
-export default withNavigation(
+export default
   createQueryRendererModern(
     UserListPaginationContainer,
     UserList,
@@ -172,8 +172,7 @@ export default withNavigation(
       `,
       variables: {cursor: null, count: 1},
     },
-  )
-);
+  );
 
 const styles = StyleSheet.create({
   container: {
