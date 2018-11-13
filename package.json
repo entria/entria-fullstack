@@ -39,6 +39,7 @@
     "babel-jest": "^23.6.0",
     "danger": "^4.0.1",
     "eslint": "^5.8.0",
+    "jest-runner-eslint": "^0.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-okonet": "^7.0.2",
     "eslint-config-shellscape": "^2.0.2",
@@ -53,6 +54,7 @@
     "flow-bin": "0.85.0",
     "jest": "^23.6.0",
     "lerna": "^3.4.3",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.15.1",
     "typescript": "^3.0.3",
     "typescript-eslint-parser": "^18.0.0"

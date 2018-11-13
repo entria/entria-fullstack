@@ -1,10 +1,7 @@
 module.exports = {
-  projects: [
-    // '<rootDir>/packages/app/jest.config.js',
-    '<rootDir>/packages/server/jest.config.js'
-  ],
+  projects: ['<rootDir>/packages/app/jest.config.js', '<rootDir>/packages/server/jest.config.js'],
   transform: {
-    '^.+\\.(js|ts|tsx)?$': 'babel-jest',
+    '^.+\\.(js|ts|tsx)?$': require.resolve('babel-jest'),
   },
   moduleFileExtensions: ['ts', 'js', 'tsx'],
 };
