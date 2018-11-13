@@ -18,3 +18,5 @@ export { customRender as render };
 
 const queryMock = new QueryMock();
 queryMock.setup(GRAPHQL_URL);
+
+export { queryMock };
