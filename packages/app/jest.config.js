@@ -3,11 +3,13 @@ module.exports = {
   preset: 'react-native',
   transformIgnorePatterns: ['node_modules/(?!react-native|react-navigation)/'],
   transform: {
-    '^.+\\.js$': '<rootDir>/node_modules/react-native/jest/preprocessor.js',
+    '^.+\\.js$': require.resolve('react-native/jest/preprocessor'),
   },
   moduleNameMapper: {
-    'styled-components': '<rootDir>/node_modules/styled-components/dist/styled-components.native.cjs.js',
+    'styled-components': require.resolve('styled-components/native/dist/styled-components.native.cjs'),
   },
-  setupFiles: ['<rootDir>/test/setupFiles.js'],
+  setupFiles: [
+    require.resolve('./test/setupFiles'),
+  ],
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(j|t)s?$',
 };
