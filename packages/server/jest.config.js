@@ -12,12 +12,12 @@ const pack = require("./package");
 module.exports = {
   displayName: pack.name,
   name: pack.name,
-  testEnvironment: '<rootDir>/packages/server/test/environment/mongodb',
+  testEnvironment: '<rootDir>/test/environment/mongodb',
   // testPathIgnorePatterns: ignoredPaths,
   // coverageReporters: ['lcov', 'html'],
-  setupTestFrameworkScriptFile: '<rootDir>/packages/server/test/setupTestFramework.js',
-  globalSetup: '<rootDir>/packages/server/test/setup.js',
-  globalTeardown: '<rootDir>/packages/server/test/teardown.js',
+  setupTestFrameworkScriptFile: '<rootDir>/test/setupTestFramework.js',
+  globalSetup: '<rootDir>/test/setup.js',
+  globalTeardown: '<rootDir>/test/teardown.js',
   resetModules: false,
   reporters: [
     'default',
