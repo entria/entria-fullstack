@@ -49,8 +49,8 @@
     "relay": "relay-compiler --src ./src --schema data/schema.graphql",
     "relay:watch": "yarn relay -- --watch",
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "ios": "./node_modules/.bin/react-native run-ios",
-    "android": "./node_modules/.bin/react-native run-android",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
     "test": "jest"
   }
 }
