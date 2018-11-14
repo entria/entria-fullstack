@@ -38,9 +38,6 @@
     "relay-compiler": "1.6.2",
     "relay-devtools": "^1.4.0"
   },
-  "jest": {
-    "preset": "react-native"
-  },
   "private": true,
   "scripts": {
     "android:apk": "cd android && ./gradlew assembleRelease",
