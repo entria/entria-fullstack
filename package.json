@@ -79,7 +79,9 @@
     "jest:lint": "jest --config jest-eslint.config.js",
     "lint": "eslint --ext .js packages/**",
     "lint:staged": "lint-staged",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "start:server": "lerna run start --scope @entria/server --stream",
+    "start:app": "lerna run start --scope @entria/app --stream"
   },
   "workspaces": {
     "packages": [
