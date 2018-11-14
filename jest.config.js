@@ -3,5 +3,5 @@ module.exports = {
   transform: {
     '^.+\\.(js|ts|tsx)?$': require.resolve('babel-jest'),
   },
-  moduleFileExtensions: ['ts', 'js', 'tsx'],
+  moduleFileExtensions: ['js', 'css', 'ts', 'tsx'],
 };
