@@ -2,11 +2,12 @@
   "name": "@entria/server",
   "description": "Entria GraphQL Server",
   "version": "0.0.1",
-  "private": true,
   "dependencies": {
+    "@babel/core": "^7.1.6",
     "@babel/polyfill": "^7.0.0",
     "@entria/graphql-mongoose-loader": "^2.1.1",
     "apollo-server-koa": "^2.0.4",
+    "babel-core": "^7.0.0-bridge.0",
     "bcryptjs": "^2.4.3",
     "dataloader": "^1.4.0",
     "dotenv-safe": "^4.0.4",
@@ -33,7 +34,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.1.6",
     "@babel/node": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-decorators": "^7.0.0",
@@ -72,6 +73,8 @@
     "esm": "^3.0.5",
     "flow-bin": "^0.80.0",
     "husky": "^0.14.3",
+    "jest-fetch-mock": "^1.7.4",
+    "jest-junit": "^5.2.0",
     "jest-runner-eslint": "^0.6.0",
     "lint-staged": "7.2.2",
     "mongodb-memory-server": "^2.1.0",
@@ -85,6 +88,7 @@
     "typescript-eslint-parser": "^18.0.0"
   },
   "license": "MIT",
+  "private": true,
   "scripts": {
     "build": "npm run clear && babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts\" --ignore *.spec.js --out-dir dist --copy-files",
     "clear": "rimraf ./dist",
@@ -93,13 +97,13 @@
     "jest:lint": "jest --config jest-eslint.config.js",
     "lint": "eslint src/**",
     "precommit": "lint-staged",
-    "typecheck": "tsc",
     "prettier": "prettier --write --single-quote true --trailing-comma all --print-width 120",
     "repl": "nodemon --config ./repl/nodemon.json ./repl.js --exec babel-node",
     "serve": "node dist/index.js",
     "start": "nodemon --extensions \".es6,.js,.es,.jsx,.mjs,.ts\" src/index.js",
-    "test": "jest --coverage",
+    "test": "jest",
     "test:watch": "jest --watch --coverage",
+    "typecheck": "tsc",
     "update-schema": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts\" ./scripts/updateSchema.js"
   }
 }

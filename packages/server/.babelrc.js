@@ -9,6 +9,7 @@ module.exports = {
         },
       },
     ],
+    '@babel/preset-typescript',
   ],
   plugins: [
     '@babel/plugin-proposal-object-rest-spread',
@@ -17,21 +18,5 @@ module.exports = {
     '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-transform-async-to-generator',
     '@babel/plugin-syntax-async-generators',
-  ],
-  overrides: [
-    {
-      test: ['./src/**/*.ts'],
-      presets: [
-        '@babel/preset-typescript',
-        [
-          '@babel/preset-env',
-          {
-            targets: {
-              node: 'current',
-            },
-          },
-        ],
-      ],
-    },
   ],
 };

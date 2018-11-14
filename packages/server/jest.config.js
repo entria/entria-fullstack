@@ -12,27 +12,30 @@ const pack = require("./package");
 module.exports = {
   displayName: pack.name,
   name: pack.name,
-  testEnvironment: '<rootDir>/packages/server/test/environment/mongodb',
+  testEnvironment: '<rootDir>/test/environment/mongodb',
   // testPathIgnorePatterns: ignoredPaths,
   // coverageReporters: ['lcov', 'html'],
-  setupTestFrameworkScriptFile: '<rootDir>/packages/server/test/setupTestFramework.js',
-  globalSetup: '<rootDir>/packages/server/test/setup.js',
-  globalTeardown: '<rootDir>/packages/server/test/teardown.js',
+  setupTestFrameworkScriptFile: '<rootDir>/test/setupTestFramework.js',
+  globalSetup: '<rootDir>/test/setup.js',
+  globalTeardown: '<rootDir>/test/teardown.js',
   resetModules: false,
-  // reporters: [
-  //   'default',
-  //   [
-  //     'jest-junit',
-  //     {
-  //       suiteName: 'GraphQL Dataloader Boilerplate Tests',
-  //       output: './test-results/jest/results.xml',
-  //     },
-  //   ],
-  // ],
-  // transform: {
-  //   '^.+\\.(js|ts|tsx)?$': 'babel-jest',
-  // },
-  moduleFileExtensions: ['ts', 'js', 'tsx'],
-  // testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(js?|ts?)$',
-  // rootDir: "../..",
+  reporters: [
+    'default',
+    [
+      'jest-junit',
+      {
+        suiteName: 'GraphQL Dataloader Boilerplate Tests',
+        output: './test-results/jest/results.xml',
+      },
+    ],
+  ],
+  transform: {
+    // '^.+\\.(js|ts|tsx)?$': 'babel-jest',
+    // '^.+\\.(js|ts|tsx)?$': '<rootDir>/node_modules/babel-jest',
+    // '^.+\\.(js|ts|tsx)?$': '<rootDir>/../../node_modules/babel-jest',
+    '^.+\\.(js|ts|tsx)?$': '<rootDir>/test/babel-transformer',
+  },
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(js?|ts?)$',
+  moduleFileExtensions: ['ts', 'js'],
+
 };

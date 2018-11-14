@@ -4,7 +4,7 @@ module.exports = {
     '<rootDir>/packages/server/jest.config.js'
   ],
   transform: {
-    '^.+\\.(js|ts|tsx)?$': 'babel-jest',
+    '^.+\\.(js|ts|tsx)?$': require.resolve('babel-jest'),
   },
-  moduleFileExtensions: ['ts', 'js', 'tsx'],
+  moduleFileExtensions: ['js', 'css', 'ts', 'tsx'],
 };
