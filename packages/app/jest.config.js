@@ -7,6 +7,7 @@ module.exports = {
   },
   moduleNameMapper: {
     'styled-components': require.resolve('styled-components/native/dist/styled-components.native.cjs'),
+    '^React$': require.resolve('react'),
   },
   setupFiles: [
     require.resolve('./test/setupFiles'),
