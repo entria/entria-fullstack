@@ -81,7 +81,9 @@
     "lint:staged": "lint-staged",
     "test": "jest --coverage",
     "start:server": "lerna run start --scope @entria/server --stream",
-    "start:app": "lerna run start --scope @entria/app --stream"
+    "start:app": "lerna run start --scope @entria/app --stream",
+    "start:ios": "lerna run ios --scope @entria/app --stream",
+    "start:android": "lerna run android --scope @entria/app --stream"
   },
   "workspaces": {
     "packages": [
