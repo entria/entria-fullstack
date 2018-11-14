@@ -1,3 +1,5 @@
+const { workspaces = [] } = require('./package.json');
+
 module.exports = {
   presets: [
     '@babel/preset-flow',

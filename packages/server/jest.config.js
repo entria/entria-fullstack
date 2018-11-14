@@ -1,20 +1,23 @@
-const ignoredPaths = [
-  '<rootDir>/node_modules/',
-  '<rootDir>/dist',
-  '<rootDir>/scripts',
-  '<rootDir>/repl/',
-  '<rootDir>/flow-typed/',
-  '<rootDir>/test/',
-];
+const pack = require("./package");
+
+// const ignoredPaths = [
+//   '<rootDir>/node_modules/',
+//   '<rootDir>/dist',
+//   '<rootDir>/scripts',
+//   '<rootDir>/repl/',
+//   '<rootDir>/flow-typed/',
+//   '<rootDir>/test/',
+// ];
 
 module.exports = {
-  displayName: 'test',
-  testEnvironment: '<rootDir>/test/environment/mongodb',
-  testPathIgnorePatterns: ignoredPaths,
-  coverageReporters: ['lcov', 'html'],
-  setupTestFrameworkScriptFile: '<rootDir>/test/setupTestFramework.js',
-  globalSetup: '<rootDir>/test/setup.js',
-  globalTeardown: '<rootDir>/test/teardown.js',
+  displayName: pack.name,
+  name: pack.name,
+  testEnvironment: '<rootDir>/packages/server/test/environment/mongodb',
+  // testPathIgnorePatterns: ignoredPaths,
+  // coverageReporters: ['lcov', 'html'],
+  setupTestFrameworkScriptFile: '<rootDir>/packages/server/test/setupTestFramework.js',
+  globalSetup: '<rootDir>/packages/server/test/setup.js',
+  globalTeardown: '<rootDir>/packages/server/test/teardown.js',
   resetModules: false,
   reporters: [
     'default',
@@ -34,4 +37,5 @@ module.exports = {
   },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(js?|ts?)$',
   moduleFileExtensions: ['ts', 'js'],
+
 };
