@@ -96,14 +96,14 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-        at: ~/app
+          at: ~/app
       - run: *lint
 
   test:
     <<: *defaults
     steps:
       - attach_workspace:
-        at: ~/app
+          at: ~/app
       - restore_cache: *restore-mongodb-binaries-cache
       - run: *test
       - save_cache: *save-mongodb-binaries-cache
@@ -122,7 +122,7 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-        at: ~/app
+          at: ~/app
       - run: *check-changes
 
 workflows:
