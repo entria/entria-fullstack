@@ -126,11 +126,9 @@ workflows:
     jobs:
       - install_deps
       - lint:
-          filters: *filter-only-master-and-tags
           requires:
             - install_deps
       - test:
-          filters: *filter-only-master-and-tags
           requires:
             - install_deps
       - build_server:
