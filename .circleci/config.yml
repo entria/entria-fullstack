@@ -69,6 +69,9 @@ aliases:
         - master
 
 defaults: &defaults
+  environment:
+    IMAGE_NAME_SERVER: "server"
+    K8S_DEPLOYMENT_SERVER: "server"
   working_directory: ~/app
   docker:
     - image: entria/node-ci:0.1.4
@@ -89,10 +92,14 @@ jobs:
           root: .
           paths: .
 
-  verify_pr:
+  lint:
     <<: *defaults
     steps:
       - run: *lint
+
+  test:
+    <<: *defaults
+    steps:
       - restore_cache: *restore-mongodb-binaries-cache
       - run: *test
       - save_cache: *save-mongodb-binaries-cache
@@ -118,14 +125,20 @@ workflows:
   full:
     jobs:
       - install_deps
-      - verify_pr:
-          filters: *filter-only-not-master
+      - lint:
+          filters: *filter-only-master-and-tags
+          requires:
+            - install_deps
+      - test:
+          filters: *filter-only-master-and-tags
           requires:
             - install_deps
       - build_server:
           filters: *filter-only-master-and-tags
           requires:
-            - install_deps
+            - lint
+            - test
       - check_changes:
+          filters: *filter-only-master-and-tags
           requires:
             - install_deps

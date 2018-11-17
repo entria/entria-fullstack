@@ -1,0 +1,9 @@
+{
+  "name": "@entria/shared",
+  "version": "0.0.213",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@feedback/babel": "0.0.1"
+  }
+}
