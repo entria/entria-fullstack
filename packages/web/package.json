@@ -41,6 +41,6 @@
     "url-loader": "^1.1.2",
     "webpack": "^4.25.1",
     "webpack-nano": "^0.2.0",
-    "webpack-plugin-serve": "github:shellscape/webpack-plugin-serve"
+    "webpack-plugin-serve": "^0.1.1"
   }
 }
