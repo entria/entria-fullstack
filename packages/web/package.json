@@ -1,0 +1,46 @@
+{
+  "name": "web-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": ">= 10.11.0"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development wp --config ./webpack.config",
+    "build": "cross-env NODE_ENV=production wp --config ./webpack.config",
+    "jest:lint": "jest --config jest-eslint.config.js",
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "jest-dom": "^2.1.1",
+    "jest-runner-eslint": "^0.7.1",
+    "jest-serializer-html": "^5.0.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-hot-loader": "^4.3.12",
+    "react-testing-library": "^5.2.3",
+    "regenerator-runtime": "^0.12.1",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.25.1",
+    "webpack-nano": "^0.2.0",
+    "webpack-plugin-serve": "^0.1.1"
+  }
+}
