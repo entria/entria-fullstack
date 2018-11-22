@@ -107,7 +107,7 @@ module.exports = {
   output: {
     path: outputPath,
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: isDev ? 'bundle.[contenthash].js' : 'bundle.js'
   },
   plugins,
   watch: isDev
