@@ -11,6 +11,6 @@ module.exports = {
   },
   target: 'node',
   resolve: {
-    extensions: ['.js', '.ts'],
+    extensions: ['.js', '.ts', '.tsx'],
   },
 };
