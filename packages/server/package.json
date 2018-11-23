@@ -97,7 +97,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "npm run clear && webpack --env.mode=prod",
+    "build": "npm run clear && babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts\" --ignore *.spec.js --out-dir dist --copy-files",
+    "build:webpack": "npm run clear && webpack --env.mode=prod",
     "clear": "rimraf ./dist",
     "flow": "flow",
     "flow-log": "yarn flow --show-all-errors > flow.log",
