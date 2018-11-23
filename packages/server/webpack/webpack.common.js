@@ -10,6 +10,10 @@ module.exports = {
     path: resolve('dist'),
   },
   target: 'node',
+  node: {
+    __filename: false,
+    __dirname: false,
+  },
   resolve: {
     extensions: ['.js', '.ts', '.tsx'],
   },
