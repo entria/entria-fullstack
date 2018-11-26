@@ -1,3 +1,4 @@
+/* eslint implicit-arrow-linebreak: 0 */
 // @flow
 import '@babel/polyfill';
 import { createServer } from 'http';
@@ -26,7 +27,8 @@ logger.add(getConsoleTransport('graphql-main'));
     logger.info(`Server started on port :${process.env.GRAPHQL_PORT}`);
     SubscriptionServer.create(
       {
-        onConnect: connectionParams => logger.info('Client subscription connected!', connectionParams),
+        onConnect: connectionParams =>
+          logger.info('Client subscription connected!', connectionParams),
         onDisconnect: () => logger.info('Client subscription disconnected!'),
         execute,
         subscribe,
@@ -39,3 +41,13 @@ logger.add(getConsoleTransport('graphql-main'));
     );
   });
 })();
+
+let currentApp = app;
+
+if (module.hot) {
+  module.hot.accept('./index.js', () => {
+    app.removeListener('request', currentApp);
+    app.on('request', app);
+    currentApp = app;
+  });
+}
