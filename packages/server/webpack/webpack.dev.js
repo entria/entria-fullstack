@@ -11,7 +11,7 @@ module.exports = merge.smart(common, {
   watch: true,
   stats: 'errors-only',
   entry: {
-    server: ['webpack/hot/poll?1000'],
+    index: ['webpack/hot/poll?1000'],
   },
   externals: [
     WebpackNodeExternals({
