@@ -2,7 +2,7 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const WebpackNodeExternals = require('webpack-node-externals');
-const ReloadServerPlugin = require('reload-server-webpack-plugin');
+const AutoReloadServerPlugin = require('auto-reload-webpack-plugin');
 
 const common = require('./webpack.common');
 
@@ -28,8 +28,8 @@ module.exports = merge.smart(common, {
     ],
   },
   plugins: [
-    new ReloadServerPlugin({
-      script: resolve('dist', 'server.js'),
+    new AutoReloadServerPlugin({
+      filePath: 'dist/index.js',
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
