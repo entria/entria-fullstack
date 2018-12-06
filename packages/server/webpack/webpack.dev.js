@@ -18,15 +18,6 @@ module.exports = merge.smart(common, {
       whitelist: ['webpack/hot/poll?1000'],
     }),
   ],
-  module: {
-    rules: [
-      {
-        test: /\.(js|ts|tsx)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader'],
-      },
-    ],
-  },
   plugins: [
     new AutoReloadServerPlugin({
       filePath: 'dist/index.js',
