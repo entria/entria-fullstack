@@ -1,9 +1,11 @@
 const { resolve } = require('path');
-const webpack = require('webpack');
 
 module.exports = {
-  entry: {
-    index: ['./src/index.js'],
+  entry: './src/index.js',
+  cache: {
+    type: 'filesystem',
+    cacheDirectory: resolve(__dirname, '.cache'),
+    loglevel: 'warning',
   },
   output: {
     filename: '[name].js',

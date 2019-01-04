@@ -1,42 +1,19 @@
 const { resolve } = require('path');
 
 const webpack = require('webpack');
-const { WebpackPluginServe: Serve } = require('webpack-plugin-serve');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const isDev = process.env.NODE_ENV === 'development';
-const outputPath = resolve(__dirname, 'dist');
-
-const entry = isDev ? ['./src/index.tsx', 'webpack-plugin-serve/client'] : './src/index.tsx';
-
-const plugins = [
-  new HtmlWebpackPlugin(),
-  new webpack.DefinePlugin({
-    'process.env': {
-      NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-    },
-  }),
-];
-
-if (isDev) {
-  plugins.push(
-    new Serve({
-      hmr: true,
-      historyFallback: true,
-      static: [outputPath],
-    }),
-  );
-} else {
-  plugins.push(new MiniCssExtractPlugin());
-}
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const outputPath = resolve(__dirname, '../dist');
 
 module.exports = {
-  entry,
   mode: process.env.NODE_ENV,
   devtool: 'cheap-eval-source-map',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
+  cache: {
+    type: 'filesystem',
+    cacheDirectory: resolve(__dirname, '.cache'),
   },
   module: {
     rules: [
@@ -44,10 +21,6 @@ module.exports = {
         test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
-      },
-      {
-        test: /\.css$/,
-        use: !isDev ? [MiniCssExtractPlugin.loader, 'css-loader'] : ['style-loader', 'css-loader'],
       },
       {
         test: /\.woff(\?.*)?$/,
@@ -112,8 +85,13 @@ module.exports = {
   output: {
     path: outputPath,
     publicPath: '/',
-    filename: !isDev ? 'bundle.[contenthash].js' : 'bundle.js',
   },
-  plugins,
-  watch: isDev,
+  plugins: [
+    // new HtmlWebpackPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      },
+    }),
+  ],
 };
