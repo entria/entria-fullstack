@@ -1,7 +1,9 @@
 const { resolve } = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: ['./src/index.js'],
+  },
   cache: {
     type: 'filesystem',
     cacheDirectory: resolve(__dirname, '.cache'),
