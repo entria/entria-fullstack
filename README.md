@@ -1,6 +1,6 @@
 # Entria FullStack Playground
 
-- [ ] lerna
+- [x] lerna
 - [x] eslint
 - [ ] flow and ts (migrating to ts)
 - [ ] jest
