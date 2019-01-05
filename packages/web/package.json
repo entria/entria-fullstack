@@ -9,7 +9,7 @@
     "build": "cross-env NODE_ENV=production wp --config ./webpack/webpack.prod",
     "jest:lint": "jest --config jest-eslint.config.js",
     "test": "jest --coverage",
-    "ts:check": "tsc --noEmit"
+    "ts:check": "tsc"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.2.5",
