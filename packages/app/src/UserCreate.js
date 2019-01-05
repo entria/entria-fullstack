@@ -1,7 +1,6 @@
 // @flow
 
 import React, { Component } from 'react';
-import { withNavigation } from 'react-navigation';
 import styled from 'styled-components';
 
 import Button from './components/Button';
@@ -42,20 +41,20 @@ class UserCreate extends Component<any, Props, State> {
       name,
       email,
       password,
-    }
+    };
 
     const onCompleted = () => {
       console.log('onCompleted');
 
       this.props.navigation.navigate('UserList');
-    }
+    };
 
     const onError = () => {
       console.log('onError');
-    }
+    };
 
     UserRegisterWithEmailMutation.commit(input, onCompleted, onError);
-  }
+  };
 
   goToList = () => {
     this.props.navigation.navigate('UserList');

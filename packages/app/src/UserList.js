@@ -1,18 +1,7 @@
 // @flow
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableHighlight,
-  FlatList,
-} from 'react-native';
-import { withNavigation } from 'react-navigation';
-
-import {
-  createPaginationContainer,
-  graphql,
-} from 'react-relay';
+import { StyleSheet, Text, View, TouchableHighlight, FlatList } from 'react-native';
+import { createPaginationContainer, graphql } from 'react-relay';
 import { createQueryRendererModern } from './relay';
 
 import { type UserList_query } from './__generated__/UserList_query.graphql';
@@ -43,9 +32,9 @@ class UserList extends Component<any, Props, State> {
 
     this.setState({
       isFetchingTop: true,
-    })
+    });
 
-    this.props.relay.refetchConnection(users.edges.length, (err) => {
+    this.props.relay.refetchConnection(users.edges.length, () => {
       this.setState({
         isFetchingTop: false,
       });
@@ -58,7 +47,7 @@ class UserList extends Component<any, Props, State> {
     }
 
     // fetch more 2
-    this.props.relay.loadMore(2, (err) => {
+    this.props.relay.loadMore(2, err => {
       console.log('loadMore: ', err);
     });
   };
@@ -67,10 +56,7 @@ class UserList extends Component<any, Props, State> {
     const { node } = item;
 
     return (
-      <TouchableHighlight
-        onPress={() => this.goToUserDetail(node)}
-        underlayColor="whitesmoke"
-      >
+      <TouchableHighlight onPress={() => this.goToUserDetail(node)} underlayColor="whitesmoke">
         <View style={styles.userContainer}>
           <Text>{node.name}</Text>
         </View>
@@ -109,10 +95,7 @@ const UserListPaginationContainer = createPaginationContainer(
   {
     query: graphql`
       fragment UserList_query on Query {
-        users(
-          first: $count
-          after: $cursor
-        ) @connection(key: "UserList_users") {
+        users(first: $count, after: $cursor) @connection(key: "UserList_users") {
           pageInfo {
             hasNextPage
             endCursor
@@ -124,7 +107,7 @@ const UserListPaginationContainer = createPaginationContainer(
             }
           }
         }
-      } 
+      }
     `,
   },
   {
@@ -138,7 +121,7 @@ const UserListPaginationContainer = createPaginationContainer(
         count: totalCount,
       };
     },
-    getVariables(props, { count, cursor }, fragmentVariables) {
+    getVariables(props, { count, cursor }) {
       return {
         count,
         cursor,
@@ -146,33 +129,21 @@ const UserListPaginationContainer = createPaginationContainer(
     },
     variables: { cursor: null },
     query: graphql`
-      query UserListPaginationQuery (
-        $count: Int!,
-        $cursor: String
-      ) {
+      query UserListPaginationQuery($count: Int!, $cursor: String) {
         ...UserList_query
       }
     `,
   },
 );
 
-
-export default
-  createQueryRendererModern(
-    UserListPaginationContainer,
-    UserList,
-    {
-      query: graphql`
-        query UserListQuery(
-          $count: Int!,
-          $cursor: String
-        ) {
-          ...UserList_query
-        }
-      `,
-      variables: {cursor: null, count: 1},
-    },
-  );
+export default createQueryRendererModern(UserListPaginationContainer, UserList, {
+  query: graphql`
+    query UserListQuery($count: Int!, $cursor: String) {
+      ...UserList_query
+    }
+  `,
+  variables: { cursor: null, count: 1 },
+});
 
 const styles = StyleSheet.create({
   container: {

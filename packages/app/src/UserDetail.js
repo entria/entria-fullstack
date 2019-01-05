@@ -3,15 +3,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import {
-  graphql,
-  createFragmentContainer,
-  QueryRenderer,
-} from 'react-relay';
+import { graphql, createFragmentContainer } from 'react-relay';
 import { createQueryRendererModern } from './relay';
 
 import { type UserDetail_query } from './__generated__/UserDetail_query.graphql';
-import { withNavigation } from "react-navigation";
+import { withNavigation } from 'react-navigation';
 
 type Props = {
   query: UserDetail_query,
@@ -50,18 +46,14 @@ const UserDetailFragmentContainer = createFragmentContainer(
 );
 
 export default withNavigation(
-  createQueryRendererModern(
-    UserDetailFragmentContainer,
-    UserDetail,
-    {
-      query: graphql`
-        query UserDetailQuery($id: ID!) {
+  createQueryRendererModern(UserDetailFragmentContainer, UserDetail, {
+    query: graphql`
+      query UserDetailQuery($id: ID!) {
         ...UserDetail_query
-        }
-      `,
-      queriesParams: ({ navigation }) => ({ id: navigation.state.params.id }),
-    },
-  )
+      }
+    `,
+    queriesParams: ({ navigation }) => ({ id: navigation.state.params.id }),
+  }),
 );
 
 const styles = StyleSheet.create({
