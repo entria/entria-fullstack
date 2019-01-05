@@ -84,7 +84,8 @@
     "start:server": "lerna run start --scope @entria/server --stream",
     "start:app": "lerna run start --scope @entria/app --stream",
     "start:ios": "lerna run ios --scope @entria/app --stream",
-    "start:android": "lerna run android --scope @entria/app --stream"
+    "start:android": "lerna run android --scope @entria/app --stream",
+    "start:web": "lerna run start --scope @entria/web --stream"
   },
   "workspaces": {
     "packages": [

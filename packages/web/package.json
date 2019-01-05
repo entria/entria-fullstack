@@ -1,5 +1,5 @@
 {
-  "name": "web-app",
+  "name": "@entria/web",
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
@@ -36,9 +36,9 @@
     "regenerator-runtime": "^0.13.1",
     "style-loader": "^0.23.1",
     "ts-jest": "^23.10.5",
-    "url-loader": "^1.1.2",
     "typescript": "^3.2.2",
     "typescript-eslint-parser": "^18.0.0",
+    "url-loader": "^1.1.2",
     "webpack": "next",
     "webpack-nano": "^0.6.1",
     "webpack-plugin-serve": "^0.3.1"

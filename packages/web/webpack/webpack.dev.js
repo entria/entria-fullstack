@@ -4,7 +4,7 @@ const merge = require('webpack-merge');
 const { WebpackPluginServe: Serve } = require('webpack-plugin-serve');
 
 const baseConf = require('./webpack.common');
-const outputPath = resolve(__dirname, 'dist');
+const outputPath = resolve(__dirname, '../dist');
 
 module.exports = merge(baseConf, {
   output: {
@@ -26,4 +26,5 @@ module.exports = merge(baseConf, {
       },
     ],
   },
+  watch: true,
 });
