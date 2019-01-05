@@ -2,7 +2,7 @@ const { resolve } = require('path');
 
 const webpack = require('webpack');
 
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const outputPath = resolve(__dirname, '../dist');
 
 module.exports = {
@@ -23,62 +23,20 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /\.woff(\?.*)?$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            name: 'fonts/[name].[ext]',
-            mimetype: 'application/font-woff',
+        test: /\.(jpe?g|png|gif|svg|pdf|csv|xlsx|ttf|woff(2)?)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'img/',
+            },
           },
-        },
+        ],
       },
       {
-        test: /\.woff2(\?.*)?$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            name: 'fonts/[name].[ext]',
-            mimetype: 'application/font-woff2',
-          },
-        },
-      },
-      {
-        test: /\.(otf)(\?.*)?$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: 'fonts/[name].[ext]',
-          },
-        },
-      },
-      {
-        test: /\.ttf(\?.*)?$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            name: 'fonts/[name].[ext]',
-            mimetype: 'application/octet-stream',
-          },
-        },
-      },
-      {
-        test: /\.svg(\?.*)?$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            name: 'images/[name].[ext]',
-            mimetype: 'image/svg+xml',
-          },
-        },
-      },
-      {
-        test: /\.(png|jpg)(\?.*)?$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            name: 'images/[name].[ext]',
-          },
-        },
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
@@ -87,7 +45,7 @@ module.exports = {
     publicPath: '/',
   },
   plugins: [
-    // new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),

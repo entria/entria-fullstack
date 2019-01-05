@@ -18,13 +18,5 @@ module.exports = merge(baseConf, {
       static: [outputPath],
     }),
   ],
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-    ],
-  },
   watch: true,
 });

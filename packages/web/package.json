@@ -22,7 +22,7 @@
     "css-loader": "^2.1.0",
     "eslint-plugin-react": "^7.12.2",
     "file-loader": "^2.0.0",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "4.0.0-beta.5",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
     "jest-dom": "^3.0.0",
