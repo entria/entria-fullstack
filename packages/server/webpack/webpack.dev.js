@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const WebpackNodeExternals = require('webpack-node-externals');
