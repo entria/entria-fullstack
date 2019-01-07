@@ -80,6 +80,7 @@
     "lint": "eslint --ext .js packages/**",
     "lint:staged": "lint-staged",
     "test": "jest --coverage",
+    "start": "lerna run start --stream",
     "start:server": "lerna run start --scope @entria/server --stream",
     "start:app": "lerna run start --scope @entria/app --stream",
     "start:ios": "lerna run ios --scope @entria/app --stream",
