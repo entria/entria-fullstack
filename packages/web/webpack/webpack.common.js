@@ -8,6 +8,9 @@ const outputPath = resolve(__dirname, '../dist');
 module.exports = {
   mode: process.env.NODE_ENV,
   devtool: 'cheap-eval-source-map',
+  node: {
+    global: true,
+  },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
