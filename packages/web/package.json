@@ -8,6 +8,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development wp --config ./webpack.config",
     "build": "cross-env NODE_ENV=production wp --config ./webpack.config",
+    "now-build": "cross-env NODE_ENV=production wp --config ./webpack.config",
     "jest:lint": "jest --config jest-eslint.config.js",
     "test": "jest --coverage",
     "ts:check": "tsc"
