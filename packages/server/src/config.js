@@ -4,10 +4,12 @@ import dotenvSafe from 'dotenv-safe';
 
 const root = path.join.bind(this, __dirname, '../');
 
-dotenvSafe.load({
-  path: root('.env'),
-  sample: root('.env.example'),
-});
+if (process.env.NOW_REGION) {
+  dotenvSafe.load({
+    path: root('.env'),
+    sample: root('.env.example'),
+  });
+}
 
 const ENV = ((process.env: any): {
   MONGO_URL: string,
