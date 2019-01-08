@@ -1,5 +1,5 @@
 {
-  "name": "web-app",
+  "name": "@entria/web",
   "version": "1.0.0",
   "main": "index.js",
   "engines": {
@@ -22,14 +22,8 @@
     "@types/jest": "^23.3.10",
     "@types/react": "^16.7.17",
     "@types/react-dom": "^16.0.11",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
-    "babel-loader": "^8.0.4",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
