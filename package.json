@@ -58,7 +58,9 @@
     "pre-commit": "^1.2.2",
     "prettier": "^1.15.1",
     "typescript": "^3.0.3",
-    "typescript-eslint-parser": "^18.0.0"
+    "typescript-eslint-parser": "^18.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "babel-loader": "^8.0.4"
   },
   "license": "MIT",
   "lint-staged": {
@@ -82,6 +84,7 @@
     "test": "jest --coverage",
     "start": "lerna run start --stream",
     "start:server": "lerna run start --scope @entria/server --stream",
+    "start:web": "lerna run start --scope @entria/web --stream",
     "start:app": "lerna run start --scope @entria/app --stream",
     "start:ios": "lerna run ios --scope @entria/app --stream",
     "start:android": "lerna run android --scope @entria/app --stream"
