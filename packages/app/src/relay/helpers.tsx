@@ -1,6 +1,6 @@
-// @flow
-import type { Variables, UploadableMap, CacheConfig } from 'react-relay';
-import type { RequestNode } from 'relay-runtime';
+
+import  { Variables, UploadableMap, CacheConfig } from 'react-relay';
+import  { RequestNode } from 'relay-runtime';
 
 export const isMutation = (request: RequestNode) => request.operationKind === 'mutation';
 export const isQuery = (request: RequestNode) => request.operationKind === 'query';

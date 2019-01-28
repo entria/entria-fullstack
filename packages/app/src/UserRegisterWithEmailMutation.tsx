@@ -1,7 +1,7 @@
 import { commitMutation, graphql } from 'react-relay';
 import { Environment } from './relay';
 
-import type { UserRegisterWithEmailInput, UserRegisterWithEmailMutationResponse } from './__generated__/UserRegisterWithEmailMutation.graphql';
+import  { UserRegisterWithEmailInput, UserRegisterWithEmailMutationResponse } from './__generated__/UserRegisterWithEmailMutation.graphql';
 
 const mutation = graphql`
   mutation UserRegisterWithEmailMutation($input: UserRegisterWithEmailInput!) {

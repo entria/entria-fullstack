@@ -1,9 +1,9 @@
-// @flow
+
 import { AsyncStorage } from 'react-native';
 
-import type { Variables, UploadableMap } from 'react-relay';
+import  { Variables, UploadableMap } from 'react-relay';
 
-import type { RequestNode } from 'relay-runtime';
+import  { RequestNode } from 'relay-runtime';
 
 import { handleData, getRequestBody, getHeaders, isMutation } from './helpers';
 import fetchWithRetries from './fetchWithRetries';
