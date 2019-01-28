@@ -1,4 +1,3 @@
-// @flow
 import path from 'path';
 import dotenvSafe from 'dotenv-safe';
 
@@ -11,13 +10,7 @@ if (process.env.NOW_REGION) {
   });
 }
 
-const ENV = ((process.env: any): {
-  MONGO_URL: string,
-  NODE_ENV: string,
-  GRAPHQL_PORT: string,
-  JWT_KEY: string,
-  [string]: ?string,
-});
+const ENV = process.env;
 
 // Database Settings
 const dBdevelopment = ENV.MONGO_URL || 'mongodb://localhost/database';

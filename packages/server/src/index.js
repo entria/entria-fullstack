@@ -1,5 +1,5 @@
 /* eslint implicit-arrow-linebreak: 0 */
-// @flow
+
 import '@babel/polyfill';
 import { createServer } from 'http';
 import { SubscriptionServer } from 'subscriptions-transport-ws';
