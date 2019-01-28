@@ -1,4 +1,4 @@
-// @flow
+
 
 import mongoose from 'mongoose';
 import { databaseConfig } from './config';

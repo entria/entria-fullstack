@@ -1,4 +1,3 @@
-// @flow
 import path from 'path';
 import dotenvSafe from 'dotenv-safe';
 
@@ -9,13 +8,7 @@ dotenvSafe.load({
   sample: root('.env.example'),
 });
 
-const ENV = ((process.env: any): {
-  MONGO_URL: string,
-  NODE_ENV: string,
-  GRAPHQL_PORT: string,
-  JWT_KEY: string,
-  [string]: ?string,
-});
+const ENV = process.env;
 
 // Database Settings
 const dBdevelopment = ENV.MONGO_URL || 'mongodb://localhost/database';
