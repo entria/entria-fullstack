@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "name": "entria-fs",
+  "public": true,
+  "builds": [
+    {
+      "src": "packages/web/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/server/src/index.js",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "src": "^/graphql",
+      "dest": "/packages/server/src/index.js"
+    },
+    {
+      "src": "^/main.css",
+      "dest": "/packages/web/main.css"
+    },
+    {
+      "src": "^/bundle.([a-z0-9_.]+).js",
+      "dest": "/packages/web/bundle.$1.js"
+    },
+    {
+      "src": "^/(.*)",
+      "dest": "/packages/web/index.html"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  }
+}
