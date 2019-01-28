@@ -1,8 +1,8 @@
-// @flow
+
 import { ConnectionHandler } from 'relay-runtime';
 import { isObject, isArray } from 'lodash/fp';
 
-import type { Store, RecordProxy, ConcreteNode } from 'relay-runtime';
+import  { Store, RecordProxy, ConcreteNode } from 'relay-runtime';
 
 type ListRecordRemoveUpdaterOptions = {
   parentId: string,

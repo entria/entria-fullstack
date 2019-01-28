@@ -1,4 +1,4 @@
-// @flow
+
 /* global __DEV__ */
 import { installRelayDevTools } from 'relay-devtools';
 import { Environment, Network, RecordSource, Store } from 'relay-runtime';

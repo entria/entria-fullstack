@@ -1,4 +1,4 @@
-// @flow
+
 
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
@@ -10,7 +10,7 @@ import {
 } from 'react-relay';
 import { createQueryRendererModern } from './relay';
 
-import { type UserDetail_query } from './__generated__/UserDetail_query.graphql';
+import { UserDetail_query } from './__generated__/UserDetail_query.graphql';
 import { withNavigation } from "react-navigation";
 
 type Props = {
