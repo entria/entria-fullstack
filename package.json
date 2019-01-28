@@ -80,12 +80,13 @@
     "jest:lint": "jest --config jest-eslint.config.js",
     "lint": "eslint --ext .js packages/**",
     "lint:staged": "lint-staged",
-    "test": "jest --coverage",
     "start": "lerna run start --stream",
-    "start:server": "lerna run start --scope @entria/server --stream",
+    "start:android": "lerna run android --scope @entria/app --stream",
     "start:app": "lerna run start --scope @entria/app --stream",
     "start:ios": "lerna run ios --scope @entria/app --stream",
-    "start:android": "lerna run android --scope @entria/app --stream"
+    "start:server": "lerna run start --scope @entria/server --stream",
+    "start:web": "lerna run start --scope @entria/web --stream",
+    "test": "jest --coverage"
   },
   "workspaces": {
     "packages": [
