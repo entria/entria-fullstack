@@ -1,4 +1,4 @@
-// @flow
+
 import 'isomorphic-fetch';
 
 import Koa, { Request } from 'koa';

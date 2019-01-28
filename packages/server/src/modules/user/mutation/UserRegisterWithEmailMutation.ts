@@ -1,14 +1,18 @@
-// @flow
+
 import { GraphQLString, GraphQLNonNull } from 'graphql';
 import { mutationWithClientMutationId } from 'graphql-relay';
 
 import { generateToken } from '../../../auth';
+import pubSub, { EVENTS } from '../../../pubSub';
 
 import UserModel from '../UserModel';
 
 export default mutationWithClientMutationId({
-  name: 'UserLoginWithEmail',
+  name: 'UserRegisterWithEmail',
   inputFields: {
+    name: {
+      type: new GraphQLNonNull(GraphQLString),
+    },
     email: {
       type: new GraphQLNonNull(GraphQLString),
     },
@@ -16,24 +20,24 @@ export default mutationWithClientMutationId({
       type: new GraphQLNonNull(GraphQLString),
     },
   },
-  mutateAndGetPayload: async ({ email, password }) => {
-    const user = await UserModel.findOne({ email: email.toLowerCase() });
+  mutateAndGetPayload: async ({ name, email, password }) => {
+    let user = await UserModel.findOne({ email: email.toLowerCase() });
 
-    const defaultErrorMessage = 'Invalid password';
-
-    if (!user) {
+    if (user) {
       return {
-        error: defaultErrorMessage,
+        error: 'Email already in use',
       };
     }
 
-    const correctPassword = user.authenticate(password);
+    user = new UserModel({
+      name,
+      email,
+      password,
+    });
 
-    if (!correctPassword) {
-      return {
-        error: defaultErrorMessage,
-      };
-    }
+    await user.save();
+
+    await pubSub.publish(EVENTS.USER.ADDED, { UserAdded: { user } });
 
     return {
       token: generateToken(user),
