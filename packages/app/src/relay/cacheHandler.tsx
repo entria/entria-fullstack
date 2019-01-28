@@ -1,9 +1,9 @@
-// @flow
+
 import RelayQueryResponseCache from 'relay-runtime/lib/RelayQueryResponseCache.js';
 
-import type { Variables, UploadableMap, CacheConfig } from 'react-relay';
+import  { Variables, UploadableMap, CacheConfig } from 'react-relay';
 
-import type { RequestNode } from 'relay-runtime';
+import  { RequestNode } from 'relay-runtime';
 
 import fetchQuery from './fetchQuery';
 import { isMutation, isQuery, forceFetch } from './helpers';

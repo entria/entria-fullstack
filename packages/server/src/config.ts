@@ -1,21 +1,16 @@
-// @flow
 import path from 'path';
 import dotenvSafe from 'dotenv-safe';
 
 const root = path.join.bind(this, __dirname, '../');
 
-dotenvSafe.load({
-  path: root('.env'),
-  sample: root('.env.example'),
-});
+if (process.env.NOW_REGION) {
+  dotenvSafe.load({
+    path: root('.env'),
+    sample: root('.env.example'),
+  });
+}
 
-const ENV = ((process.env: any): {
-  MONGO_URL: string,
-  NODE_ENV: string,
-  GRAPHQL_PORT: string,
-  JWT_KEY: string,
-  [string]: ?string,
-});
+const ENV = process.env;
 
 // Database Settings
 const dBdevelopment = ENV.MONGO_URL || 'mongodb://localhost/database';

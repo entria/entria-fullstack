@@ -1,9 +1,9 @@
-// @flow
+
 
 import { GraphQLString, GraphQLNonNull } from 'graphql';
 import { mutationWithClientMutationId } from 'graphql-relay';
 
-import type { GraphQLContext } from '../../../TypeDefinition';
+import { GraphQLContext } from '../../../TypeDefinition';
 
 import UserType from '../UserType';
 import * as UserLoader from '../UserLoader';

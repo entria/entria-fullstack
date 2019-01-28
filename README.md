@@ -1,6 +1,6 @@
 # Entria FullStack Playground
-
-- [ ] lerna
+![supported version](https://badgen.net/badge/node/lts/green)
+- [x] lerna
 - [x] eslint
 - [ ] flow and ts (migrating to ts)
 - [ ] jest

@@ -1,0 +1,8 @@
+packages/server/node_modules
+packages/server/dist
+packages/server/test
+packages/web/node_modules
+packages/web/dist
+.vscode
+.circleci
+./test/
