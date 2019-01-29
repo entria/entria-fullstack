@@ -42,7 +42,6 @@
     "babel-jest": "^23.6.0",
     "danger": "^4.0.1",
     "eslint": "^5.11.1",
-    "jest-runner-eslint": "^0.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-okonet": "^7.0.2",
     "eslint-config-shellscape": "^2.0.2",
@@ -86,7 +85,7 @@
     "start:android": "lerna run android --scope @entria/app --stream",
     "start:app": "lerna run start --scope @entria/app --stream",
     "start:ios": "lerna run ios --scope @entria/app --stream",
-    "start:web": "lerna run start --scope @entria/web --stream"
+    "start:web": "lerna run start --scope @entria/web --stream",
     "start:server": "lerna run start --scope @entria/server --stream",
     "test": "jest --coverage"
   },
