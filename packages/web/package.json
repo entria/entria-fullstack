@@ -2,9 +2,6 @@
   "name": "@entria/web",
   "version": "1.0.0",
   "main": "index.js",
-  "engines": {
-    "node": ">= 10.11.0"
-  },
   "scripts": {
     "start": "cross-env NODE_ENV=development wp --config ./webpack.config",
     "build": "cross-env NODE_ENV=production wp --config ./webpack.config",
