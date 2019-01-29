@@ -8,6 +8,7 @@ import { execute, subscribe } from 'graphql';
 import app from './app';
 import logger, { getConsoleTransport } from './core/logger';
 import { connectDatabase } from './database';
+import { graphqlPort } from './config';
 
 import { schema } from './schema';
 
@@ -23,8 +24,8 @@ logger.add(getConsoleTransport('graphql-main'));
 
   const server = createServer(app.callback());
 
-  server.listen(process.env.GRAPHQL_PORT, () => {
-    logger.info(`Server started on port :${process.env.GRAPHQL_PORT}`);
+  server.listen(graphqlPort, () => {
+    logger.info(`Server started on port :${graphqlPort}`);
     SubscriptionServer.create(
       {
         onConnect: connectionParams =>

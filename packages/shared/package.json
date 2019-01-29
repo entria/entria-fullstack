@@ -4,6 +4,6 @@
   "main": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@feedback/babel": "0.0.1"
+    "@entria/babel": "0.0.1"
   }
 }

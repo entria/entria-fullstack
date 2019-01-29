@@ -1,7 +1,5 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import './style.css';
+import UserList from './UserList';
 
-const App = () => <h1>Hi my world</h1>;
-
-export default hot(module)(App);
+export default hot(module)(UserList);
