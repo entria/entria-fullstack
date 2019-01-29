@@ -1,0 +1,14 @@
+{
+  "name": "Entria Fulstack Schema",
+  "schemaPath": "packages/server/data/schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Default GraphQL Endpoint": {
+        "url": "http://localhost:5000/graphql",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        }
+      }
+    }
+  }
+}

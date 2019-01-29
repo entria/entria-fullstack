@@ -11096,6 +11096,13 @@ realpath-native@^1.0.0:
   dependencies:
     util.promisify "^1.0.0"
 
+rebass@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/rebass/-/rebass-3.0.1.tgz#140230f4e4eceaf7adb682bcf380ceb0fff82d2f"
+  integrity sha512-IiETPunFNc3zoZoHpDsCS2Gk+OvTF6tDOSBeZzDSk9d2RMg/5DeRaXgnXnaYm+4XY1tcj7iV3psURqWpIcSdtg==
+  dependencies:
+    styled-system "^3.2.1"
+
 redent@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/redent/-/redent-1.0.0.tgz#cf916ab1fd5f1f16dfb20822dd6ec7f730c2afde"
@@ -12172,6 +12179,14 @@ styled-components@^4.0.2:
     stylis "^3.5.0"
     stylis-rule-sheet "^0.0.10"
     supports-color "^5.5.0"
+
+styled-system@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-3.2.1.tgz#491e1e6f88d7ee021f6f49376f12852cde8007cb"
+  integrity sha512-ag0Yp7UeVHHc3t+1uM3jvlljaZYzwqpbJ8hMrFvpaKfUd8xsB9JeQXLwMpEsz8iLx8Lz/+9j0coWFZjmw8MogQ==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    prop-types "^15.6.2"
 
 stylis-rule-sheet@^0.0.10:
   version "0.0.10"

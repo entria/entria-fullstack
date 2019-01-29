@@ -1,7 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import './style.css';
 
-const App:React.SFC<{}> = () => <h1>Hi my world</h1>;
+import UserList from './UserList';
 
-export default hot(module)(App);
+export default hot(module)(UserList);
