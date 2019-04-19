@@ -2,6 +2,8 @@
   "name": "@entria/web",
   "version": "1.0.0",
   "dependencies": {
+    "fbt": "^0.9.5",
+    "fbt-runtime": "^0.9.4",
     "hoist-non-react-statics": "^3.0.1",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
@@ -24,6 +26,8 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
+    "babel-plugin-fbt": "^0.9.1",
+    "babel-plugin-fbt-runtime": "^0.9.1",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
     "eslint": "^5.8.0",
@@ -57,10 +61,15 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production wp --config ./webpack.config",
     "jest:lint": "jest --config jest-eslint.config.js",
+    "manifest": "babel-node ../transform/babel-plugin-fbt/bin/manifest --src src",
     "now-build": "cross-env NODE_ENV=production wp --config ./webpack.config",
     "relay": "relay-compiler --src ./src --schema ../server/data/schema.graphql --language typescript",
     "start": "cross-env NODE_ENV=development wp --config ./webpack.config",
     "test": "jest --coverage",
-    "ts:check": "tsc"
+    "ts:check": "tsc",
+    "fbt:manifest": "babel-node ../../node_modules/babel-plugin-fbt/bin/manifest --src src",
+    "fbt:collect": "babel-node ../../node_modules/babel-plugin-fbt/bin/collectFBT --json-input --pretty < .src_manifest.json > .source_strings.json",
+    "fbt:translate": "babel-node ../../node_modules/babel-plugin-fbt/bin/translate.js --translations translations/*.json --jenkins --pretty > .translated_fbts.json",
+    "fbt:clean": "rm .enum_manifest.json .src_manifest.json source_strings.json src/translatedFbts.json 2&> /dev/null || exit 0"
   }
 }

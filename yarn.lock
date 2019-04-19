@@ -51,7 +51,7 @@
   dependencies:
     "@babel/highlight" "^7.0.0"
 
-"@babel/core@^7.0.0", "@babel/core@^7.1.2", "@babel/core@^7.1.5", "@babel/core@^7.1.6":
+"@babel/core@^7.0.0", "@babel/core@^7.1.2", "@babel/core@^7.1.5", "@babel/core@^7.1.6", "@babel/core@^7.2.0", "@babel/core@^7.2.2":
   version "7.2.2"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.2.2.tgz#07adba6dde27bb5ad8d8672f15fde3e08184a687"
   dependencies:
@@ -489,7 +489,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-syntax-class-properties@^7.0.0":
+"@babel/plugin-syntax-class-properties@^7.0.0", "@babel/plugin-syntax-class-properties@^7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-class-properties/-/plugin-syntax-class-properties-7.2.0.tgz#23b3b7b9bcdabd73672a9149f728cd3be6214812"
   dependencies:
@@ -2901,6 +2901,24 @@ babel-plugin-check-es2015-constants@^6.8.0:
   resolved "https://registry.yarnpkg.com/babel-plugin-check-es2015-constants/-/babel-plugin-check-es2015-constants-6.22.0.tgz#35157b101426fd2ffd3da3f75c7d1e91835bbf8a"
   dependencies:
     babel-runtime "^6.22.0"
+
+babel-plugin-fbt-runtime@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-fbt-runtime/-/babel-plugin-fbt-runtime-0.9.1.tgz#4475bcdf53cb1582ed1926e512c16e007ccf2749"
+  integrity sha512-ZPCfnX1zqg6flly3BEr4bSSfV8nCECM1YtRiCg2+sqyiI5aY0dq0OJsPd5kSiv5KkCz8hCA58VpQ/V+fRCMUdQ==
+  dependencies:
+    "@babel/core" "^7.2.2"
+
+babel-plugin-fbt@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-fbt/-/babel-plugin-fbt-0.9.1.tgz#844cea89c270818dae74924ffa2f46ce30fecae2"
+  integrity sha512-ueo7HXAIGm6TO8nVNwKJwglzTZegIZxhI5LrjaQ9QJNUNE9jHANap+laMAMN2VtE7wXc+ApKffxcnHD1gCb2xA==
+  dependencies:
+    "@babel/core" "^7.2.0"
+    "@babel/generator" "^7.2.2"
+    fb-babel-plugin-utils "0.9.0"
+    optimist "^0.6.1"
+    shelljs "^0.8.3"
 
 babel-plugin-istanbul@^4.1.6:
   version "4.1.6"
@@ -5809,6 +5827,23 @@ fastparse@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/fastparse/-/fastparse-1.1.2.tgz#91728c5a5942eced8531283c79441ee4122c35a9"
 
+fb-babel-plugin-utils@0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/fb-babel-plugin-utils/-/fb-babel-plugin-utils-0.9.0.tgz#e7c3a40d598dfc113c08a4ba62ae8439a7a08d0c"
+  integrity sha512-jpSFOMJAEAOuTyBh3FEWx2mptNCmaLrjtCt+LjdpOx9dgaiwZwNaNWbmsI1nHzuptDr9vaUDGEUSkLB6PbZfaw==
+  dependencies:
+    "@babel/core" "^7.2.0"
+    "@babel/generator" "^7.2.2"
+    "@babel/plugin-syntax-class-properties" "^7.2.0"
+    "@babel/plugin-syntax-flow" "^7.2.0"
+    "@babel/plugin-syntax-jsx" "^7.2.0"
+    "@babel/plugin-syntax-nullish-coalescing-operator" "^7.2.0"
+    "@babel/plugin-syntax-numeric-separator" "^7.2.0"
+    "@babel/plugin-syntax-object-rest-spread" "^7.2.0"
+    "@babel/plugin-syntax-optional-catch-binding" "^7.2.0"
+    "@babel/plugin-syntax-optional-chaining" "^7.2.0"
+    babylon "^6.18.0"
+
 fb-watchman@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/fb-watchman/-/fb-watchman-2.0.0.tgz#54e9abf7dfa2f26cd9b1636c588c1afc05de5d58"
@@ -5858,6 +5893,16 @@ fbjs@^1.0.0:
     promise "^7.1.1"
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.18"
+
+fbt-runtime@^0.9.4:
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/fbt-runtime/-/fbt-runtime-0.9.4.tgz#93a11d8879582dbad666efab5452452b9aa256f1"
+  integrity sha512-KgD6AxaXc4ti0f+Lebsjm5Gv/9mcpRW+JO47dQ5J8osIb0Mz7ScszBZgPawB16A1EcS/qa6HVKqBhuz7xNeCow==
+
+fbt@^0.9.5:
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/fbt/-/fbt-0.9.5.tgz#6647698d7feb3f9c09fd1a152b8e09b50e9d5126"
+  integrity sha512-qebj1UWgae88ImUxzUW7mHh8j9oWLToX+o3pFygjupH9wZ8QmYz2CvCQMYIYxxV14oADNBkJiJmy6mhPKSNc5w==
 
 fd-slicer@~1.0.1:
   version "1.0.1"
@@ -11739,6 +11784,15 @@ shell-quote@1.6.1, shell-quote@^1.6.1:
     array-map "~0.0.0"
     array-reduce "~0.0.0"
     jsonify "~0.0.0"
+
+shelljs@^0.8.3:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/shelljs/-/shelljs-0.8.3.tgz#a7f3319520ebf09ee81275b2368adb286659b097"
+  integrity sha512-fc0BKlAWiLpwZljmOvAOTE/gXawtCoNrP5oaY7KIaQbbyHeQVg01pSEuEGvGh3HEdBU4baCD7wQBwADmM/7f7A==
+  dependencies:
+    glob "^7.0.0"
+    interpret "^1.0.0"
+    rechoir "^0.6.2"
 
 shellwords@^0.1.1:
   version "0.1.1"

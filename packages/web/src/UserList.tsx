@@ -5,6 +5,7 @@ import { UserList_query } from './__generated__/UserList_query.graphql';
 import { Flex } from 'rebass';
 import { alignItems, flexDirection, justifyContent, space } from 'styled-system';
 import styled from 'styled-components';
+import fbt from 'fbt';
 
 const Card = styled.a`
   border-radius: 2px;
@@ -32,6 +33,11 @@ class UserList extends React.Component<Props> {
 
     return (
       <Flex flexDirection='column'>
+        <span>
+          <fbt desc="Usuários">
+            Usuários
+          </fbt>
+        </span>
         {users.edges.map(({node}) => (
           <Card key={node.id}>
             <span>User: {node.name}</span>
