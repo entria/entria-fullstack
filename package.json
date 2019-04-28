@@ -68,6 +68,16 @@
       "yarn jest:lint --passWithNoTests",
       "git add"
     ],
+    "*.ts": [
+      "prettier --write --single-quote true --trailing-comma all --print-width 100",
+      "tslint --fix",
+      "git add"
+    ],
+    "*.tsx": [
+      "prettier --write --single-quote true --trailing-comma all --print-width 100",
+      "tslint --fix",
+      "git add"
+    ],
     "*.yml": [
       "prettier --write",
       "git add"
