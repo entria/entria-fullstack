@@ -1,12 +1,9 @@
-
-
 import React, { Component } from 'react';
-import { withNavigation } from 'react-navigation';
 import styled from 'styled-components';
 
 import Button from './components/Button';
 import Input from './components/Input';
-import UserRegisterWithEmailMutation from './UserRegisterWithEmailMutation.js';
+import UserRegisterWithEmailMutation from './UserRegisterWithEmailMutation';
 
 const Wrapper = styled.View`
   flex: 1;
@@ -24,7 +21,7 @@ type State = {
   password: string,
 };
 
-class UserCreate extends Component<any, Props, State> {
+class UserCreate extends Component<unknown, State> {
   static navigationOptions = {
     title: 'UserCreate',
   };
