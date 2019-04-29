@@ -11,7 +11,9 @@ const outputPath = resolve(__dirname, 'dist');
 const entry = isDev ? ['./src/index.tsx', 'webpack-plugin-serve/client'] : './src/index.tsx';
 
 const plugins = [
-  new HtmlWebpackPlugin(),
+  new HtmlWebpackPlugin({
+    template: './src/index.html',
+  }),
   new webpack.DefinePlugin({
     'process.env': {
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
@@ -23,7 +25,10 @@ if (isDev) {
   plugins.push(
     new Serve({
       hmr: true,
-      historyFallback: true,
+      historyFallback: {
+        verbose: true,
+        disableDotRule: true,
+      },
       static: [outputPath],
     }),
   );
