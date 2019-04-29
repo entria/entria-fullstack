@@ -16,7 +16,7 @@
     "@babel/preset-typescript": "^7.3.3",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-material-ui": "^0.3.1",
-    "babel-plugin-relay": "^1.7.0",
+    "babel-plugin-relay": "^4.0.0",
     "babel-plugin-styled-components": "^1.8.0"
   }
 }
