@@ -31,10 +31,10 @@ const UserList = ({ query }: Props) => {
 
   return (
     <Flex flexDirection='column'>
-      {users.edges.map(({node}) => (
-        <Card key={node.id}>
-          <span>User: {node.name}</span>
-          <span>Email: {node.name}</span>
+      {users!.edges.map((edge) => (
+        <Card key={edge!.node.id}>
+          <span>User: {edge!.node.name}</span>
+          <span>Email: {edge!.node.name}</span>
         </Card>
       ))}
     </Flex>

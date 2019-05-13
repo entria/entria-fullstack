@@ -3,7 +3,7 @@ module.exports = {
   bail: false,
   snapshotSerializers: ['jest-serializer-html'],
   displayName: 'web-app',
-  setupTestFrameworkScriptFile: require.resolve('./jest.setup.js'),
+  setupFilesAfterEnv: [require.resolve('./jest.setup.js')],
   transformIgnorePatterns: ['node_modules/'],
   coverageReporters: ['lcov', 'html'],
   transform: {

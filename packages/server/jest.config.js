@@ -1,4 +1,4 @@
-const pack = require("./package");
+const pack = require('./package');
 
 // const ignoredPaths = [
 //   '<rootDir>/node_modules/',
@@ -15,7 +15,7 @@ module.exports = {
   testEnvironment: '<rootDir>/test/environment/mongodb',
   // testPathIgnorePatterns: ignoredPaths,
   // coverageReporters: ['lcov', 'html'],
-  setupTestFrameworkScriptFile: '<rootDir>/test/setupTestFramework.js',
+  setupFilesAfterEnv: ['<rootDir>/test/setupTestFramework.js'],
   globalSetup: '<rootDir>/test/setup.js',
   globalTeardown: '<rootDir>/test/teardown.js',
   resetModules: false,
