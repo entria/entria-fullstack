@@ -1673,6 +1673,14 @@
   resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-14.2.0.tgz#74e1da5f2a4a744ac6eb3ed57b48242ea9367202"
   integrity sha512-lELg5m6eBOmATWyCZl8qULEOvnPIUG6B443yXKj930glXIgwQirIBPp5rthP2amJW0YSzUg2s5sfgba4mRRCNw==
 
+"@types/hoist-non-react-statics@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
+  integrity sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==
+  dependencies:
+    "@types/react" "*"
+    hoist-non-react-statics "^3.3.0"
+
 "@types/http-assert@*":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@types/http-assert/-/http-assert-1.4.0.tgz#41d173466e396e99a14d75f7160cc997f2f9ed8b"
@@ -1838,6 +1846,22 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-native@*":
+  version "0.57.55"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.55.tgz#3e6e474e9c1d86b20064c6c65c5ccdf86333f0c9"
+  integrity sha512-tYL/eEPvZiNBropEvT0jS+LR87Djnt6NcHsW+AVwI/8C3ABqfbChXNotrkkW5vmuBTlkz4nJrx6IIJRmgx+/Cg==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/react" "*"
+
+"@types/react-relay@^1.3.14":
+  version "1.3.14"
+  resolved "https://registry.yarnpkg.com/@types/react-relay/-/react-relay-1.3.14.tgz#72b590be03b193feca4c732370d80647fb64bda7"
+  integrity sha512-Zh5IpiG15D3eZQuhxnqpBrxcszmGv1JfDB4BdBkd4WnfZ0iHUqHTLX506BT/Nk8x9fezfqxOv9c4W8yITZizMQ==
+  dependencies:
+    "@types/react" "*"
+    "@types/relay-runtime" "*"
+
 "@types/react@*", "@types/react@^16.7.17":
   version "16.8.14"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.14.tgz#b561bfabeb8f60d12e6d4766367e7a9ae927aa18"
@@ -1845,6 +1869,20 @@
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
+
+"@types/rebass@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@types/rebass/-/rebass-3.0.3.tgz#ff585d59781917c1555907c10b1575cae99ddef7"
+  integrity sha512-2/zZV9W7QVjEnJnrwy3TArzdSTVVhNFylWLcricMj5RfmglbM08etPgwelPP/I/UTHUEDjRAEkUYp7YzJt1vhQ==
+  dependencies:
+    "@types/react" "*"
+    "@types/styled-components" "*"
+    "@types/styled-system" "*"
+
+"@types/relay-runtime@*":
+  version "1.3.12"
+  resolved "https://registry.yarnpkg.com/@types/relay-runtime/-/relay-runtime-1.3.12.tgz#602b98eb333b47d98213816d7e40273edaac3e90"
+  integrity sha512-MXM7ElUpLzPfaIlG6263qDd7+zdNpqy43K90yyQzB0ax1hKMJ+R3WfaVLFxn/X49YR8fa6kwA3ikjh2A/JNFJg==
 
 "@types/serve-static@*":
   version "1.13.2"
@@ -1858,6 +1896,22 @@
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
   integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
+
+"@types/styled-components@*":
+  version "4.1.14"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.14.tgz#fe029b0bfb2d26af7f9bd4dd4811b31961ff6d49"
+  integrity sha512-X5t+uomPU9vxWNnfEpw2W7RtJDpsWCsBizQq95gB2QXrG5qsALV1/H7tfv4xYhTmiG5CGtcbfp4nU4yhhEqTsw==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+    csstype "^2.2.0"
+
+"@types/styled-system@*":
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-4.1.3.tgz#0a860146b4f46973ea668207220fe63e0833f48e"
+  integrity sha512-7nF95ofPRmgZ18nCORC9gsqXh2B7wFVxP8b3j8KIm4/65XqVg9TgsiKymn+x9Txepg262VN1mCai86bDnjZt7g==
+  dependencies:
+    csstype "^2.6.4"
 
 "@types/ws@^6.0.0":
   version "6.0.1"
@@ -4040,7 +4094,7 @@ cssstyle@^1.0.0:
   dependencies:
     cssom "0.3.x"
 
-csstype@^2.2.0:
+csstype@^2.2.0, csstype@^2.6.4:
   version "2.6.4"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.4.tgz#d585a6062096e324e7187f80e04f92bd0f00e37f"
   integrity sha512-lAJUJP3M6HxFXbqtGRc0iZrdyeN+WzOWeY0q/VnFzI+kqVrYIzC7bWlKqCW7oCIdzoPkvfp82EVvrTlQ8zsWQg==
@@ -11233,10 +11287,10 @@ relateurl@0.2.x:
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=
 
-relay-compiler-language-typescript@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/relay-compiler-language-typescript/-/relay-compiler-language-typescript-2.5.0.tgz#798f11c36517cb7cc22db5c128402c72e9d28140"
-  integrity sha512-3jPYwzpFM6pViCnotlxkX0iWO3syJAmPgWxM3TWiCn80W+6w4gOwCwo7MO45k+I+sKK8sv82F/FVM2UBr9exoA==
+relay-compiler-language-typescript@^4.0.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/relay-compiler-language-typescript/-/relay-compiler-language-typescript-4.2.0.tgz#fe3306902113cedafdd59d98a7a2f28886318132"
+  integrity sha512-sMs059u5eh7dwINzIHBAPTr8ZtrOxDl1oVzHq/2sZ8vIXIDTVvVtdSeTgkx/B8e/NePuemQeE331UCV6bfMnfA==
   dependencies:
     immutable "^3.8.2"
     invariant "^2.2.2"
