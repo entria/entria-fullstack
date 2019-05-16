@@ -39,7 +39,7 @@
     "jest-runner-eslint": "^0.7.1",
     "jest-serializer-html": "^7.0.0",
     "mini-css-extract-plugin": "^0.6.0",
-    "react-hot-loader": "^4.8.4",
+    "react-hot-loader": "^4.8.5",
     "react-testing-library": "^7.0.0",
     "regenerator-runtime": "^0.13.2",
     "relay-compiler": "^4.0.0",
