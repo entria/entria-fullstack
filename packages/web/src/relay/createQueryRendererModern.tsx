@@ -1,7 +1,7 @@
 
 import * as React from 'react';
 import hoistStatics from 'hoist-non-react-statics';
-import { QueryRenderer, GraphQLTaggedNode, RelayContainer } from 'react-relay';
+import { QueryRenderer, GraphQLTaggedNode } from 'react-relay';
 import { Variables } from 'relay-runtime'
 
 import Environment from './Environment';
@@ -13,12 +13,8 @@ type Config = {
   hideSplash?: boolean,
 };
 
-type FragmentComponentTypes = {
-  query?: Variables;
-}
-
 export default function createQueryRenderer<P>(
-  FragmentComponent: RelayContainer<P> & FragmentComponentTypes,
+  FragmentComponent: any,
   Component: React.ComponentType<P>,
   config: Config,
 ) {
