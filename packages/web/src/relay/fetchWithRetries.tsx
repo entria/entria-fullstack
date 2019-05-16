@@ -1,13 +1,13 @@
 import ExecutionEnvironment from './ExecuteEnvironment';
 
 export type InitWithRetries = {
-  body?: unknown,
-  cache?: string | null,
-  credentials?: string | null,
+  body?: BodyInit | null,
+  cache?: RequestCache,
+  credentials?: RequestCredentials,
+  headers?: HeadersInit,
+  method?: string,
+  mode?: RequestMode,
   fetchTimeout?: number | null,
-  headers?: unknown,
-  method?: string | null,
-  mode?: string | null,
   retryDelays?: Array<number> | null,
 };
 
@@ -19,9 +19,9 @@ const DEFAULT_RETRIES = [1000, 3000];
  * Automatic retries are done based on the values in `retryDelays`.
  */
 function fetchWithRetries(uri: string, initWithRetries?: InitWithRetries | null): Promise<any> {
-  const { fetchTimeout, retryDelays, ...init } = initWithRetries || {};
-  const _fetchTimeout = fetchTimeout != null ? fetchTimeout : DEFAULT_TIMEOUT;
-  const _retryDelays = retryDelays != null ? retryDelays : DEFAULT_RETRIES;
+  const { fetchTimeout = null, retryDelays = null, ...init } = initWithRetries || {};
+  const _fetchTimeout = fetchTimeout !== null ? fetchTimeout : DEFAULT_TIMEOUT;
+  const _retryDelays = retryDelays !== null ? retryDelays : DEFAULT_RETRIES;
 
   let requestsAttempted = 0;
   let requestStartTime = 0;

@@ -1,5 +1,7 @@
+// @ts-ignore
 import { installRelayDevTools } from 'relay-devtools';
 import { Environment, Network, RecordSource, Store } from 'relay-runtime';
+// @ts-ignore
 import RelayNetworkLogger from 'relay-runtime/lib/RelayNetworkLogger';
 
 import cacheHandler from './cacheHandler';
