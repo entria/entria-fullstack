@@ -1,4 +1,4 @@
-import  { Variables, UploadableMap } from 'react-relay';
+import  { Variables, UploadableMap } from 'relay-runtime';
 
 import  { RequestNode } from 'relay-runtime';
 

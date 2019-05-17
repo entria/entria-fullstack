@@ -1,5 +1,5 @@
 
-import  { Variables, UploadableMap, CacheConfig } from 'react-relay';
+import  { Variables, UploadableMap, CacheConfig } from 'relay-runtime';
 import  { RequestNode } from 'relay-runtime';
 
 export const isMutation = (request: RequestNode) => request.operationKind === 'mutation';
@@ -15,7 +15,7 @@ export const handleData = (response: any) => {
   return response.text();
 };
 
-function getRequestBodyWithUploadables(request, variables, uploadables) {
+function getRequestBodyWithUploadables(request: RequestNode, variables: Variables, uploadables: UploadableMap) {
   let formData = new FormData();
   formData.append('name', request.name);
   formData.append('query', request.text);
@@ -30,7 +30,7 @@ function getRequestBodyWithUploadables(request, variables, uploadables) {
   return formData;
 }
 
-function getRequestBodyWithoutUplodables(request, variables) {
+function getRequestBodyWithoutUplodables(request: RequestNode, variables: Variables) {
   return JSON.stringify({
     name: request.name, // used by graphql mock on tests
     query: request.text, // GraphQL text from input

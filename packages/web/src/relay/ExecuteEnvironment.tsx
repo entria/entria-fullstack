@@ -11,7 +11,7 @@ const ExecutionEnvironment = {
 
   canUseWorkers: typeof Worker !== 'undefined',
 
-  canUseEventListeners: canUseDOM && !!(window.addEventListener || window.attachEvent),
+  canUseEventListeners: canUseDOM && !!(window.addEventListener || (window as any).attachEvent),
 
   canUseViewport: canUseDOM && !!window.screen,
 

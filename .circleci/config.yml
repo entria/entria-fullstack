@@ -33,6 +33,8 @@ aliases:
   - &test
     name: Run Tests
     command: |
+      yarn relay:web
+      yarn relay:app
       yarn jest --maxWorkers=4 --coverage --forceExit --ci
       bash <(curl -s https://codecov.io/bash)
   - &check-changes
