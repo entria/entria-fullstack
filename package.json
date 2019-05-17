@@ -97,7 +97,7 @@
     "lint:staged": "lint-staged",
     "relay:app": "yarn workspace @entria/app relay",
     "relay:web": "yarn workspace @entria/web relay",
-    "start": "yarn start:server && yarn start:web & yarn start:app",
+    "start": "yarn start:server & yarn start:web & yarn start:app",
     "start:android": "yarn workspace @entria/app android",
     "start:app": "yarn workspace @entria/app start",
     "start:ios": "yarn workspace @entria/app ios",
