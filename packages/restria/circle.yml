@@ -1,0 +1,41 @@
+version: 2
+executorType: docker
+jobs:
+  build:
+    environment:
+      - IMAGE_NAME: "restria"
+      - ENTRIA_ENVIROMENT: "development"
+    working_directory: ~/app
+    docker:
+      - image: buildpack-deps:trusty
+    steps:
+      - checkout
+      - run:
+          name: Install Docker Compose
+          command: |
+            set -x
+            curl -L https://github.com/docker/compose/releases/download/1.11.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+            chmod +x /usr/local/bin/docker-compose
+      - run:
+          name: Install Docker client
+          command: |
+            set -x
+            VER="17.05.0-ce"
+            curl -L -o /tmp/docker-$VER.tgz https://get.docker.com/builds/Linux/x86_64/docker-$VER.tgz
+            tar -xz -C /tmp -f /tmp/docker-$VER.tgz
+            mv /tmp/docker/* /usr/bin
+      - setup_remote_docker
+      - run:
+          name: Start testing environment
+          command: docker-compose up -d
+      - run:
+          name: Run tests
+          shell: /bin/bash
+          command: docker-compose run restria yarn test
+      - run:
+          name: Run flow
+          shell: /bin/bash
+          command: docker-compose run restria yarn flow
+      - run:
+          name: Stop testing environment
+          command: docker-compose down

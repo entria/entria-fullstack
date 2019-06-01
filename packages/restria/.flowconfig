@@ -1,0 +1,15 @@
+[ignore]
+
+[include]
+
+[libs]
+flow-typed
+
+[options]
+sharedmemory.hash_table_pow=21
+esproposal.export_star_as=enable
+
+;include_warnings=true
+
+[lints]
+all=warn
