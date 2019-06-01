@@ -102,6 +102,7 @@
     "start:app": "yarn workspace @entria/app start",
     "start:ios": "yarn workspace @entria/app ios",
     "start:server": "yarn workspace @entria/server start",
+    "start:restria": "yarn workspace @entria/restria start",
     "start:web": "yarn workspace @entria/web start",
     "test": "jest --coverage"
   },
