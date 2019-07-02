@@ -2,6 +2,8 @@ import DataLoader from 'dataloader';
 import { connectionFromMongoCursor, mongooseLoader } from '@entria/graphql-mongoose-loader';
 import { Types } from 'mongoose';
 import { ConnectionArguments } from 'graphql-relay';
+import mongoose from 'mongoose';
+declare type ObjectId = mongoose.Schema.Types.ObjectId;
 
 import UserModel, { IUser } from './UserModel';
 
@@ -31,18 +33,18 @@ export default class User {
   }
 }
 
-export const getLoader = () => new DataLoader(ids => mongooseLoader(UserModel, ids));
+export const getLoader = () => new DataLoader((ids: ReadonlyArray<string>) => mongooseLoader(UserModel, ids));
 
 const viewerCanSee = () => true;
 
-export const load = async (context: GraphQLContext, id: string): Promise<User | null> => {
-  if (!id) {
+export const load = async (context: GraphQLContext, id: string | Object | ObjectId): Promise<User | null> => {
+  if (!id && typeof id !== 'string') {
     return null;
   }
 
   let data;
   try {
-    data = await context.dataloaders.UserLoader.load(id);
+    data = await context.dataloaders.UserLoader.load((id as string));
   } catch (err) {
     return null;
   }

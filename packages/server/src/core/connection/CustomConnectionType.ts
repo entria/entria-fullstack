@@ -57,11 +57,14 @@ const pageInfoType = new GraphQLObjectType({
 });
 
 function resolveMaybeThunk<T>(thingOrThunk: Thunk<T>): T {
+  // @ts-ignore
   return typeof thingOrThunk === 'function' ? thingOrThunk() : thingOrThunk;
 }
 
 export function connectionDefinitions(config: ConnectionConfig): GraphQLConnectionDefinitions {
   const { nodeType, resolveCursor, resolveNode } = config;
+  // @ts-ignore
+  // this has the correct properties inside ConnectionConfigNodeTypeNullable
   const name = config.name || nodeType.name;
   const edgeFields = config.edgeFields || {};
   const connectionFields = config.connectionFields || {};

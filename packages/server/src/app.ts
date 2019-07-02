@@ -4,30 +4,38 @@ import 'isomorphic-fetch';
 import Koa, { Request } from 'koa';
 import bodyParser from 'koa-bodyparser';
 import cors from 'kcors';
+// TODO: contribute to the package creating a TS definition
+// there is a definition inside index.d.ts but not working
 import graphqlHttp from 'koa-graphql';
+// TODO: contribute to the package creating a TS definition
+// @ts-ignore 
 import graphqlBatchHttpWrapper from 'koa-graphql-batch';
 import logger from 'koa-logger';
 import Router from 'koa-router';
-// import { graphiqlKoa } from 'apollo-server-koa';
 import koaPlayground from 'graphql-playground-middleware-koa';
 import { GraphQLError } from 'graphql';
 
 import { schema } from './schema';
 import { getUser } from './auth';
 import * as loaders from './loader';
+import { Loaders } from './interface/NodeInterface';
 
 const app = new Koa();
 const router = new Router();
 
-app.keys = [process.env.JWT_KEY];
+const JWT_KEY: string = process.env.JWT_KEY || '';
+
+app.keys = [JWT_KEY];
 
 const graphqlSettingsPerReq = async (req: Request) => {
   const { user } = await getUser(req.header.authorization);
 
-  const dataloaders = Object.keys(loaders).reduce(
+  const AllLoaders: Loaders = loaders;
+
+  const dataloaders = Object.keys(AllLoaders).reduce(
     (acc, loaderKey) => ({
       ...acc,
-      [loaderKey]: loaders[loaderKey].getLoader(),
+      [loaderKey]: AllLoaders[loaderKey].getLoader(),
     }),
     {},
   );
