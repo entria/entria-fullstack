@@ -1,5 +1,3 @@
-
-
 import { GraphQLSchema } from 'graphql';
 
 import QueryType from './type/QueryType';

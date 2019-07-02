@@ -1,7 +1,6 @@
 import Dataloader from 'dataloader';
 
 import { IUser } from './modules/user/UserModel';
-import User from './modules/user/UserLoader';
 
 type Key = string;
 
@@ -10,6 +9,6 @@ export type Dataloaders = {
 };
 
 export type GraphQLContext = {
-  user?: User;
+  user?: IUser;
   dataloaders: Dataloaders;
 };

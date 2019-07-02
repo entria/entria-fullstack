@@ -10,7 +10,8 @@
     "generator-star-spacing": 0,
     "object-curly-newline": 0,
     "import/prefer-default-export": 0,
-    "function-paren-newline": 0
+    "function-paren-newline": 0,
+    "import/no-extraneous-dependencies": 0
   },
   "env": {
     "jest": true

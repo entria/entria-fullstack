@@ -10,7 +10,7 @@ export async function getUser(token: string) {
   try {
     const decodedToken = jwt.verify(token.substring(4), jwtSecret);
 
-    const user = await User.findOne({ _id: decodedToken.id });
+    const user = await User.findOne({ _id: (decodedToken as { id: string }).id });
 
     return {
       user,

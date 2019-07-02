@@ -22,7 +22,7 @@ const consoleFormatter = format((info) => {
       // in case error is an Error object, make it undefined here, since we print it separately
       error: info.error instanceof Error ? undefined : info.error,
     }),
-    null,
+    undefined,
     2,
   );
 

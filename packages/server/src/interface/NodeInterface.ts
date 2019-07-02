@@ -1,6 +1,6 @@
 
 import { fromGlobalId, nodeDefinitions } from 'graphql-relay';
-
+import DataLoader from 'dataloader';
 import { GraphQLObjectType } from 'graphql';
 
 import * as loaders from '../loader';
@@ -18,15 +18,18 @@ export function registerType(type: GraphQLObjectType) {
 
 type Loader = {
   load: (context: GraphQLContext, id: string) => Promise<any>;
+  getLoader: () => DataLoader<string, any>;
 };
-type Loaders = {
+
+export type Loaders = {
   [key: string]: Loader;
 };
+
 export const { nodeField, nodeInterface } = nodeDefinitions(
   (globalId, context: GraphQLContext) => {
     const { type, id } = fromGlobalId(globalId);
     // TODO - convert loaders to Loaders
-    const loader = loaders[`${type}Loader`];
+    const loader: Loader = (loaders as Loaders)[`${type}Loader`];
 
     return (loader && loader.load(context, id)) || null;
   },
