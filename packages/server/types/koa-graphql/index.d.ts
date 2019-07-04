@@ -7,7 +7,7 @@ declare module "koa-graphql" {
     ValidationContext,
     ASTVisitor
   } from "graphql";
-  import { GraphQLParams, RequestInfo } from "express-graphql";
+  import { RequestInfo } from "express-graphql";
 
   export type Options =
     | ((request: Request, repsonse: Response, ctx: Context) => OptionsResult)
