@@ -47,7 +47,7 @@ declare module "koa-graphql" {
      * An optional array of validation rules that will be applied on the document
      * in addition to those defined by the GraphQL spec.
      */
-    validationRules?: Array<(ValidationContext) => ASTVisitor>;
+    validationRules?: Array<(context: ValidationContext) => ASTVisitor>;
 
     /**
      * An optional function for adding additional metadata to the GraphQL response
