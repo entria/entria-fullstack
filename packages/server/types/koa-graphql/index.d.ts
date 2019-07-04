@@ -58,8 +58,8 @@ declare module "koa-graphql" {
      * Information about the request is provided to be used.
      *
      * This function may be async.
-     */
-    extensions?: (info: RequestInfo) => { [key: string]: any };
+     */ 
+    extensions?: ((info: RequestInfo) => any) | ((args: RequestInfo) => Promise<any>)
 
     /**
      * A boolean to optionally enable GraphiQL mode.
