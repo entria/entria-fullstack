@@ -4,10 +4,7 @@ import 'isomorphic-fetch';
 import Koa, { Request } from 'koa';
 import bodyParser from 'koa-bodyparser';
 import cors from 'kcors';
-// TODO: contribute to the package creating a TS definition
-// there is a definition inside index.d.ts but not working
 import graphqlHttp from 'koa-graphql';
-// TODO: contribute to the package creating a TS definition
 // @ts-ignore 
 import graphqlBatchHttpWrapper from 'koa-graphql-batch';
 import logger from 'koa-logger';
