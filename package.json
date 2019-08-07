@@ -70,12 +70,12 @@
     ],
     "*.ts": [
       "prettier --write --single-quote true --trailing-comma all --print-width 100",
-      "tslint --fix",
+      "eslint --fix",
       "git add"
     ],
     "*.tsx": [
       "prettier --write --single-quote true --trailing-comma all --print-width 100",
-      "tslint --fix",
+      "eslint --fix",
       "git add"
     ],
     "*.yml": [
