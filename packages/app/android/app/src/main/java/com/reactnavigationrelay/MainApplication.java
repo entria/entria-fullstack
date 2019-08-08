@@ -1,4 +1,4 @@
-package com.rndiffapp;
+package com.reactnavigationrelay;
 
 import android.app.Application;
 import android.util.Log;
