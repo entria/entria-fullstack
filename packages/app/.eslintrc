@@ -11,7 +11,7 @@
     "flowtype",
     "import"
   ],
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "@react-native-community"],
   "rules": {
     "comma-dangle": [2, "always-multiline"],
     "quotes": [2, "single", { "allowTemplateLiterals": true }],

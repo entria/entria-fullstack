@@ -11,7 +11,8 @@
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.4",
+    "@babel/core": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
     "babel-core": "^7.0.0-bridge.0",
@@ -27,7 +28,7 @@
     "graphql-compiler": "^1.7.0",
     "graphql-query-test-mock": "^0.12.0",
     "isomorphic-fetch": "^2.2.1",
-    "jest": "^24.7.1",
+    "jest": "^24.8.0",
     "jest-runner-eslint": "^0.7.3",
     "lint-staged": "^9.2.1",
     "metro-react-native-babel-preset": "0.55.0",
@@ -39,7 +40,8 @@
     "relay-compiler": "^5.0.0",
     "relay-compiler-language-typescript": "^4.0.0",
     "relay-devtools": "^1.4.0",
-    "relay-runtime": "^5.0.0"
+    "relay-runtime": "^5.0.0",
+    "@react-native-community/eslint-config": "^0.0.5"
   },
   "private": true,
   "license": "MIT",
@@ -47,14 +49,14 @@
     "android": "react-native run-android",
     "android:apk": "cd android && ./gradlew assembleRelease",
     "android:install": "adb install android/app/build/outputs/apk/app-release.apk",
-    "clear": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
+    "clear": "react-native start --reset-cache",
     "devtools": "react-devtools",
     "ios": "react-native run-ios",
     "lint": "eslint src",
     "lint:staged": "lint-staged",
     "relay": "relay-compiler --watchman false --src ./src --schema data/schema.graphql --language typescript",
     "relay:watch": "yarn relay -- --watch",
-    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start": "react-native start",
     "test": "jest"
   }
 }
