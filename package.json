@@ -86,11 +86,7 @@
     ]
   },
   "main": "index.js",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint:staged"
-    }
-  },
+  "pre-commit": "lint-staged",
   "private": true,
   "scripts": {
     "delete:all": "yarn delete:build && yarn delete:node_modules && yarn delete:yarn-offline-cache",
