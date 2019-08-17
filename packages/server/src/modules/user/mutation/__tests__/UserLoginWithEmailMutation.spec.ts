@@ -29,7 +29,7 @@ it('should not login if email is not in the database', async () => {
         clientMutationId
         token
         error
-      }     
+      }
     }
   `;
 
@@ -43,7 +43,7 @@ it('should not login if email is not in the database', async () => {
   const result = await graphql(schema, query, rootValue, context, variables);
 
   expect(result.data.UserLoginWithEmail.token).toBe(null);
-  expect(result.data.UserLoginWithEmail.error).toBe('Invalid password');
+  expect(result.data.UserLoginWithEmail.error).toBe('Email not found');
 });
 
 it('should not login with wrong password', async () => {
