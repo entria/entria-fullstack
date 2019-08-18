@@ -19,10 +19,10 @@ export default mutationWithClientMutationId({
   mutateAndGetPayload: async ({ email, password }) => {
     const user = await UserModel.findOne({ email: email.toLowerCase() });
 
-
+    const defaultErrorMessage = 'Invalid credentials'
     if (!user) {
       return {
-        error: 'Email not found',
+        error: defaultErrorMessage,
       };
     }
 
@@ -30,7 +30,7 @@ export default mutationWithClientMutationId({
 
     if (!correctPassword) {
       return {
-        error: 'Invalid password',
+        error: defaultErrorMessage,
       };
     }
 
