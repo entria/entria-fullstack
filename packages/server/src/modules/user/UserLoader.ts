@@ -21,7 +21,7 @@ export default class User {
   active: boolean | null | undefined;
 
   constructor(data: IUser, { user }: GraphQLContext) {
-    this.id = data.id;
+    this.id = data._id;
     this._id = data._id;
     this.name = data.name;
 
