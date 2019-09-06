@@ -1,6 +1,6 @@
 FROM node:lts
 
-MAINTAINER Entria <hello@entria.com.br>
+LABEL maintainer="Entria <hello@entria.com.br>"
 
 RUN mkdir -p /app
 WORKDIR /app
