@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "dependencies": {
     "hoist-non-react-statics": "^3.0.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
     "react-relay": "^5.0.0",
     "rebass": "^4.0.2",
     "styled-components": "^4.2.0",
@@ -56,6 +56,10 @@
     "webpack": "^4.25.1",
     "webpack-nano": "^0.7.1",
     "webpack-plugin-serve": "^0.12.0"
+  },
+  "resolutions": {
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
   },
   "main": "index.js",
   "license": "MIT",
