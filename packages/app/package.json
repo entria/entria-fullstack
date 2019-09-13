@@ -43,6 +43,9 @@
     "relay-runtime": "^5.0.0",
     "@react-native-community/eslint-config": "^0.0.5"
   },
+  "resolutions": {
+    "react": "16.8.6"
+  },
   "private": true,
   "license": "MIT",
   "scripts": {
