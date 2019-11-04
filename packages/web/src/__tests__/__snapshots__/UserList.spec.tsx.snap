@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserList /> should render success UserList 1`] = `
+<body>
+  <div>
+    <div>
+      <a
+        class="UserList__Card-sc-1uc7hyr-0 cHjsxG"
+      >
+        <span>
+          User: 
+          Adhis Yudha
+        </span>
+        <span>
+          Email: 
+          example.example@gmail.com
+        </span>
+      </a>
+      <a
+        class="UserList__Card-sc-1uc7hyr-0 cHjsxG"
+      >
+        <span>
+          User: 
+          Bangkit Ilham
+        </span>
+        <span>
+          Email: 
+          test.test@gmail.com
+        </span>
+      </a>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`<UserList /> should resolve query but no data 1`] = `
+<body>
+  <div>
+    <div>
+      <a
+        class="UserList__Card-sc-1uc7hyr-0 cHjsxG"
+      >
+        <span>
+          User: 
+          &lt;mock-value-for-field-"name"&gt;
+        </span>
+        <span>
+          Email: 
+          &lt;mock-value-for-field-"email"&gt;
+        </span>
+      </a>
+    </div>
+  </div>
+</body>
+`;
