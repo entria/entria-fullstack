@@ -8,17 +8,6 @@ import Environment from '../relay/Environment';
 afterEach(cleanup);
 
 describe('<UserList />', () => {
-  it('should return most recent operation', () => {
-    render(<UserListDefault />);
-    const operation = Environment.mock.getMostRecentOperation();
-    expect(operation.fragment.node.name).toBe('UserListQuery');
-  });
-
-  it('should have pending operations in the queue', () => {
-    render(<UserListDefault />);
-    expect(Environment.mock.getAllOperations().length).toEqual(1);
-  });
-
   it('should reject query', () => {
     const { getByText } = render(<UserListDefault />);
     Environment.mock.rejectMostRecentOperation(new Error('A very bad error'));
@@ -35,20 +24,20 @@ describe('<UserList />', () => {
   });
 
   it('should resolve query but no data', async () => {
-    const { debug, getByText, baseElement } = render(<UserListDefault />);
+    const { getByText } = render(<UserListDefault />);
     expect(getByText('loading')).toBeInTheDocument();
 
-    // debug();
     Environment.mock.resolveMostRecentOperation((operation) =>
     MockPayloadGenerator.generate(operation),
     );
 
-    // debug();
-    expect(baseElement).toMatchSnapshot();
+    expect(getByText(/ID: /)).toBeTruthy();
+    expect(getByText(/User: /)).toBeTruthy();
+    expect(getByText(/Email: /)).toBeTruthy();
   });
 
   it('should render success UserList', async () => {
-    const { debug, getByText, baseElement } = render(<UserListDefault />);
+    const { getByText } = render(<UserListDefault />);
 
     Environment.mock.resolveMostRecentOperation(operation =>
       MockPayloadGenerator.generate(operation, {
@@ -83,7 +72,12 @@ describe('<UserList />', () => {
       })
     );
 
-    // debug();
-    expect(baseElement).toMatchSnapshot();
+    expect(getByText('ID: Q2xpZW50OjE=')).toBeTruthy();
+    expect(getByText('User: Adhis Yudha')).toBeTruthy();
+    expect(getByText('Email: example.example@gmail.com')).toBeTruthy();
+
+    expect(getByText('ID: Q2xpZW50OjI=')).toBeTruthy();
+    expect(getByText('Email: test.test@gmail.com')).toBeTruthy();
+    expect(getByText('User: Bangkit Ilham')).toBeTruthy();
   });
 });

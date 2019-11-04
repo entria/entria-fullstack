@@ -33,8 +33,9 @@ const UserList = ({ query }: Props) => {
     <div>
       {users!.edges.map((edge) => (
         <Card key={edge!.node.id}>
-          <span>User: {edge!.node.name}</span>
-          <span>Email: {edge!.node.email}</span>
+          <span>ID: {edge ? edge.node.id : ''}</span>
+          <span>User: {edge ? edge.node.name : ''}</span>
+          <span>Email: {edge ? edge.node.email : ''}</span>
         </Card>
       ))}
     </div>
