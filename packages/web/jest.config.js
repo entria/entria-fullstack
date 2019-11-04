@@ -7,7 +7,7 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>test/setupFilesAfterEnv.ts'],
   coverageReporters: ['lcov', 'html'],
   transform: {
-    '^.+\\.tsx?$': '<rootDir>test/babel-jest.js',
+    '^.+\\.tsx?$': ['babel-jest', { cwd: __dirname }],
   },
   rootDir: './',
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
