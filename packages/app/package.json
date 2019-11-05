@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "dependencies": {
     "hoist-non-react-statics": "^3.0.1",
-    "react": "16.8.6",
+    "react": "0.0.0-experimental-f6b8d31a7",
     "react-native": "0.60.4",
     "react-navigation": "3.11.1",
     "react-relay": "^5.0.0",
@@ -12,9 +12,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
-    "@babel/runtime": "^7.5.5",
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
+    "@babel/runtime": "^7.5.5",
+    "@react-native-community/eslint-config": "^0.0.5",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "24.8.0",
@@ -40,11 +41,7 @@
     "relay-compiler": "^5.0.0",
     "relay-compiler-language-typescript": "^4.0.0",
     "relay-devtools": "^1.4.0",
-    "relay-runtime": "^5.0.0",
-    "@react-native-community/eslint-config": "^0.0.5"
-  },
-  "resolutions": {
-    "react": "16.8.6"
+    "relay-runtime": "^5.0.0"
   },
   "private": true,
   "license": "MIT",
