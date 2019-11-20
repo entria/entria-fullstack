@@ -5,6 +5,7 @@
     "allowJs": false,           /* Allow javascript files to be compiled. */
     "checkJs": false,           /* Report errors in .js files. */
     "jsx": "react",             /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+    "types": ["react-dom/experimental"]
   },
   "include": [
     "./src/**/*"
