@@ -8,10 +8,7 @@ type State = {
 };
 
 export default class ErrorBoundary extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { error: null };
-  }
+  state = { error: null };
 
   static getDerivedStateFromError(error: any) {
     return {
