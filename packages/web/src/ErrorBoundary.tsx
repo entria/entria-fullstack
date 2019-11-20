@@ -3,7 +3,9 @@ import React from 'react';
 type Props = {
   children: React.ReactNode;
 };
-type State = any;
+type State = {
+  error: Error | null;
+};
 
 export default class ErrorBoundary extends React.Component<Props, State> {
   constructor(props: Props) {
