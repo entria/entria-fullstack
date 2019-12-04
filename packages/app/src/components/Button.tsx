@@ -1,4 +1,3 @@
-//@flow
 import React from 'react';
 import styled from 'styled-components';
 
@@ -18,13 +17,13 @@ const Wrapper = styled.TouchableOpacity`
 `;
 
 type Props = {
-  onPress?: (void) => void,
-  children?: Node
+  onPress: () => void,
+  children?: React.ReactNode
 };
 
-const Button = (props: Props) => (
-  <Wrapper onPress={() => props.onPress()}>
-    {props.children}
+const Button = ({ onPress, children}: Props) => (
+  <Wrapper onPress={onPress}>
+    {children}
   </Wrapper>
 );
 

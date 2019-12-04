@@ -38,7 +38,7 @@ function getRequestBodyWithoutUplodables(request, variables) {
   });
 }
 
-export function getRequestBody(request: RequestNode, variables: Variables, uploadables: ?UploadableMap) {
+export function getRequestBody(request: RequestNode, variables: Variables, uploadables: UploadableMap | null) {
   if (uploadables) {
     return getRequestBodyWithUploadables(request, variables, uploadables);
   }
@@ -46,7 +46,7 @@ export function getRequestBody(request: RequestNode, variables: Variables, uploa
   return getRequestBodyWithoutUplodables(request, variables);
 }
 
-export const getHeaders = (uploadables: ?UploadableMap) => {
+export const getHeaders = (uploadables: UploadableMap | null) => {
   if (uploadables) {
     return {
       Accept: '*/*',
