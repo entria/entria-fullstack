@@ -1,0 +1,9 @@
+{
+  "name": "@entria/relay",
+  "version": "0.0.213",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@entria/babel": "0.0.1"
+  }
+}

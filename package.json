@@ -91,12 +91,12 @@
   "private": true,
   "scripts": {
     "app:android": "yarn workspace @entria/app android",
-    "app:ios": "yarn workspace @entria/app ios",
-    "app:start": "yarn workspace @entria/app start",
     "app:clear": "yarn workspace @entria/app clear",
-    "app:xcode": "yarn workspace @entria/app xcode",
-    "app:studio": "yarn workspace @entria/app studio",
+    "app:ios": "yarn workspace @entria/app ios",
     "app:relay": "yarn workspace @entria/app relay",
+    "app:start": "yarn workspace @entria/app start",
+    "app:studio": "yarn workspace @entria/app studio",
+    "app:xcode": "yarn workspace @entria/app xcode",
     "delete:all": "yarn delete:build && yarn delete:node_modules && yarn delete:yarn-offline-cache",
     "delete:build": "find . -name \"build\" -exec rm -rf '{}' +",
     "delete:node_modules": "find . -name \"node_modules\" -exec rm -rf '{}' +",
@@ -105,13 +105,12 @@
     "jest:lint": "jest --config jest-eslint.config.js",
     "lint": "eslint --ext .js packages/**",
     "lint:staged": "lint-staged",
-    "relay:web": "yarn workspace @entria/web relay",
-    "start": "yarn start:server & yarn start:web & yarn start:app & yarn start:restria",
     "start:android": "yarn workspace @entria/app android",
     "start:restria": "yarn workspace @entria/server start",
     "start:server": "yarn workspace @entria/server start",
-    "start:web": "yarn workspace @entria/web start",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "web:relay": "yarn workspace @entria/web relay",
+    "web:start": "yarn workspace @entria/web start"
   },
   "workspaces": {
     "packages": [
