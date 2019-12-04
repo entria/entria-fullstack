@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import { Text } from 'react-native';
 import hoistStatics from 'hoist-non-react-statics';
@@ -9,17 +8,17 @@ import  { GraphQLTaggedNode, Variables } from 'react-relay';
 import Environment from './Environment';
 
 type Config = {
-  query: ?GraphQLTaggedNode,
-  queriesParams?: ?(props: Object) => Object,
+  query: GraphQLTaggedNode | null,
+  queriesParams?: (props: object) => object,
   variables?: Variables,
   hideSplash?: boolean,
 };
 
 export default function createQueryRenderer(
-  FragmentComponent: React.ComponentType<*>,
-  Component: React.ComponentType<*>,
+  FragmentComponent: React.ComponentType,
+  Component: React.ComponentType,
   config: Config,
-): React.ComponentType<*> {
+): React.ComponentType {
   const { query, queriesParams } = config;
 
   class QueryRendererWrapper extends React.Component<{}> {

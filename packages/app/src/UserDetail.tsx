@@ -38,15 +38,18 @@ class UserDetail extends Component<void, Props, any> {
 // UserDetailFragmentContainer
 const UserDetailFragmentContainer = createFragmentContainer(
   UserDetail,
-  graphql`
-    fragment UserDetail_query on Query {
-      user(id: $id) {
-        id
-        name
-        email
+  {
+    query:
+      graphql`
+      fragment UserDetail_query on Query {
+        user(id: $id) {
+          id
+          name
+          email
+        }
       }
-    }
-  `,
+    `,
+  },
 );
 
 export default withNavigation(
