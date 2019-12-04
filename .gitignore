@@ -36,3 +36,5 @@ hard-source-cache/
 # Cypress
 cypress/videos
 cypress/screenshots
+
+!debug.keystore
