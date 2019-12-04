@@ -101,8 +101,9 @@
     "relay:web": "yarn workspace @entria/web relay",
     "start": "yarn start:server & yarn start:web & yarn start:app & yarn start:restria",
     "start:android": "yarn workspace @entria/app android",
-    "start:app": "yarn workspace @entria/app start",
-    "start:ios": "yarn workspace @entria/app ios",
+    "app:start": "yarn workspace @entria/app start",
+    "app:ios": "yarn workspace @entria/app ios",
+    "app:android": "yarn workspace @entria/app android",
     "start:server": "yarn workspace @entria/server start",
     "start:restria": "yarn workspace @entria/server start",
     "start:web": "yarn workspace @entria/web start",
@@ -111,10 +112,6 @@
   "workspaces": {
     "packages": [
       "packages/*"
-    ],
-    "nohoist": [
-      "**/react-native",
-      "**/react-native-*"
     ]
   }
 }
