@@ -1,14 +1,14 @@
 platform :ios, '9.0'
 require_relative '../../../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'ReactNavigationRelay' do
-  # Pods for ReactNavigationRelay
+target 'EntriaApp' do
+  # Pods for EntriaApp
   pod 'FBLazyVector', :path => "../../../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../../../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../../../node_modules/react-native/Libraries/RCTRequired"
   pod 'RCTTypeSafety', :path => "../../../node_modules/react-native/Libraries/TypeSafety"
   pod 'React', :path => '../../../node_modules/react-native/'
-  pod 'React-Core', :path => '../../../node_modules/react-native/React'
+  pod 'React-Core', :path => '../../../node_modules/react-native/'
   pod 'React-CoreModules', :path => '../../../node_modules/react-native/React/CoreModules'
   pod 'React-Core/DevSupport', :path => '../../../node_modules/react-native/'
   pod 'React-RCTActionSheet', :path => '../../../node_modules/react-native/Libraries/ActionSheetIOS'
@@ -34,7 +34,7 @@ target 'ReactNavigationRelay' do
   pod 'glog', :podspec => '../../../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../../../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'ReactNavigationRelayTests' do
+  target 'EntriaAppTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -42,10 +42,10 @@ target 'ReactNavigationRelay' do
   use_native_modules!
 end
 
-target 'ReactNavigationRelay-tvOS' do
-  # Pods for ReactNavigationRelay-tvOS
+target 'EntriaApp-tvOS' do
+  # Pods for EntriaApp-tvOS
 
-  target 'ReactNavigationRelay-tvOSTests' do
+  target 'EntriaApp-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

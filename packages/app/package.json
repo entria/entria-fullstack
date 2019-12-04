@@ -41,7 +41,8 @@
     "relay-compiler": "7.1.0",
     "relay-compiler-language-typescript": "10.1.2",
     "relay-devtools": "^1.4.0",
-    "relay-runtime": "7.1.0"
+    "relay-runtime": "7.1.0",
+    "react-native-gesture-handler": "1.5.2"
   },
   "private": true,
   "license": "MIT",
@@ -57,6 +58,8 @@
     "relay": "relay-compiler --watchman false --src ./src --schema data/schema.graphql --language typescript",
     "relay:watch": "yarn relay -- --watch",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "xcode": "open ios/EntriaApp.xcworkspace",
+    "studio": "open -a /Applications/Android\\\\ Studio.app ./android/"
   }
 }

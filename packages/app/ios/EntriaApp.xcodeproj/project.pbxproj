@@ -7,20 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* ReactNavigationRelayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNavigationRelayTests.m */; };
+		00E356F31AD99517003FC87E /* EntriaAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* EntriaAppTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		208DE3D9CD938CE0C1DA7C75 /* libPods-ReactNavigationRelay-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EE3CA358540C6588A43C1D /* libPods-ReactNavigationRelay-tvOSTests.a */; };
-		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		18186B63055952FB780DE82B /* libPods-EntriaApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DD8BA20143BD7609A81B2C /* libPods-EntriaApp.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* ReactNavigationRelayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNavigationRelayTests.m */; };
-		5C2DE97B62577C12BA9C2C0E /* libPods-ReactNavigationRelay-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6BB6B4FB67D5C68F131984 /* libPods-ReactNavigationRelay-tvOS.a */; };
-		9C37D99034F332D93CC9F872 /* libPods-ReactNavigationRelay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C0E98A936D2C67AB3B4397 /* libPods-ReactNavigationRelay.a */; };
-		EEC3FAB00C0D8FA80C38A2CF /* libPods-ReactNavigationRelayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA56DAE8FEC4DD9958769C68 /* libPods-ReactNavigationRelayTests.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* EntriaAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* EntriaAppTests.m */; };
+		47FC16B0B62473DC20AC4EA1 /* libPods-EntriaAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2B7529124575CE5E43F672 /* libPods-EntriaAppTests.a */; };
+		9A62FDE2CC273ED498E15796 /* libPods-EntriaApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5347FFD9623729FDE27D57D /* libPods-EntriaApp-tvOS.a */; };
+		C792ECAC8EE0D29B952E8F2D /* libPods-EntriaApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 209532EEA605B330E1241380 /* libPods-EntriaApp-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,46 +28,45 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = ReactNavigationRelay;
+			remoteInfo = EntriaApp;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "ReactNavigationRelay-tvOS";
+			remoteInfo = "EntriaApp-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* ReactNavigationRelayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNavigationRelayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* EntriaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EntriaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* ReactNavigationRelayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactNavigationRelayTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* ReactNavigationRelay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNavigationRelay.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ReactNavigationRelay/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ReactNavigationRelay/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* EntriaAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntriaAppTests.m; sourceTree = "<group>"; };
+		01D0ED52C9081443671F8711 /* Pods-EntriaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntriaAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EntriaAppTests/Pods-EntriaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* EntriaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EntriaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EntriaApp/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = EntriaApp/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ReactNavigationRelay/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReactNavigationRelay/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ReactNavigationRelay/main.m; sourceTree = "<group>"; };
-		13C0E98A936D2C67AB3B4397 /* libPods-ReactNavigationRelay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNavigationRelay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		274B59C7FF07057B66AB054E /* Pods-ReactNavigationRelay-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNavigationRelay-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNavigationRelay-tvOSTests/Pods-ReactNavigationRelay-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2B6BB6B4FB67D5C68F131984 /* libPods-ReactNavigationRelay-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNavigationRelay-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E47B1E0B4A5D006451C7 /* ReactNavigationRelay-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReactNavigationRelay-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* ReactNavigationRelay-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReactNavigationRelay-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		69B912649B020BE63ECC68CD /* Pods-ReactNavigationRelay-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNavigationRelay-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNavigationRelay-tvOSTests/Pods-ReactNavigationRelay-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		6AF5590E88793E9F0724BF29 /* Pods-ReactNavigationRelay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNavigationRelay.debug.xcconfig"; path = "Target Support Files/Pods-ReactNavigationRelay/Pods-ReactNavigationRelay.debug.xcconfig"; sourceTree = "<group>"; };
-		778128343297948DDE8A84BD /* Pods-ReactNavigationRelay-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNavigationRelay-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ReactNavigationRelay-tvOS/Pods-ReactNavigationRelay-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		BA56DAE8FEC4DD9958769C68 /* libPods-ReactNavigationRelayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNavigationRelayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEC5334C2955F00D7A30D3BE /* Pods-ReactNavigationRelay-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNavigationRelay-tvOS.release.xcconfig"; path = "Target Support Files/Pods-ReactNavigationRelay-tvOS/Pods-ReactNavigationRelay-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		BFF01E887B105C928E205225 /* Pods-ReactNavigationRelayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNavigationRelayTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNavigationRelayTests/Pods-ReactNavigationRelayTests.release.xcconfig"; sourceTree = "<group>"; };
-		C778FEFB4E4E67A51106EF63 /* Pods-ReactNavigationRelay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNavigationRelay.release.xcconfig"; path = "Target Support Files/Pods-ReactNavigationRelay/Pods-ReactNavigationRelay.release.xcconfig"; sourceTree = "<group>"; };
-		E4EE3CA358540C6588A43C1D /* libPods-ReactNavigationRelay-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNavigationRelay-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = EntriaApp/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = EntriaApp/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = EntriaApp/main.m; sourceTree = "<group>"; };
+		1F2B7529124575CE5E43F672 /* libPods-EntriaAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EntriaAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		209532EEA605B330E1241380 /* libPods-EntriaApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EntriaApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2927AB47C1105B46EA7AA394 /* Pods-EntriaApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntriaApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-EntriaApp-tvOS/Pods-EntriaApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* EntriaApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EntriaApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* EntriaApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EntriaApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39DD8BA20143BD7609A81B2C /* libPods-EntriaApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EntriaApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61653E9E53D1101CF03A5D91 /* Pods-EntriaAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntriaAppTests.release.xcconfig"; path = "Target Support Files/Pods-EntriaAppTests/Pods-EntriaAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		993D4810822984F8E1830736 /* Pods-EntriaApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntriaApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-EntriaApp-tvOSTests/Pods-EntriaApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		B0D002A8A7C125510D20048C /* Pods-EntriaApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntriaApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-EntriaApp-tvOS/Pods-EntriaApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BB549FB1A03E1FB98BF39222 /* Pods-EntriaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntriaApp.release.xcconfig"; path = "Target Support Files/Pods-EntriaApp/Pods-EntriaApp.release.xcconfig"; sourceTree = "<group>"; };
+		C42BEE09536D849634C9B1E8 /* Pods-EntriaApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntriaApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-EntriaApp-tvOSTests/Pods-EntriaApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F6E89254B93143BE4310C4FD /* Pods-ReactNavigationRelay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNavigationRelay.debug.xcconfig"; path = "Target Support Files/Pods-ReactNavigationRelay/Pods-ReactNavigationRelay.debug.xcconfig"; sourceTree = "<group>"; };
+		F1F0884C63D28D3482C34B1C /* Pods-EntriaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntriaApp.debug.xcconfig"; path = "Target Support Files/Pods-EntriaApp/Pods-EntriaApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F5347FFD9623729FDE27D57D /* libPods-EntriaApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EntriaApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEC3FAB00C0D8FA80C38A2CF /* libPods-ReactNavigationRelayTests.a in Frameworks */,
+				47FC16B0B62473DC20AC4EA1 /* libPods-EntriaAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C37D99034F332D93CC9F872 /* libPods-ReactNavigationRelay.a in Frameworks */
+				18186B63055952FB780DE82B /* libPods-EntriaApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C2DE97B62577C12BA9C2C0E /* libPods-ReactNavigationRelay-tvOS.a in Frameworks */,
+				9A62FDE2CC273ED498E15796 /* libPods-EntriaApp-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,13 +98,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				208DE3D9CD938CE0C1DA7C75 /* libPods-ReactNavigationRelay-tvOSTests.a in Frameworks */,
+				C792ECAC8EE0D29B952E8F2D /* libPods-EntriaApp-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00E356EF1AD99517003FC87E /* EntriaAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* EntriaAppTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = EntriaAppTests;
+			sourceTree = "<group>";
+		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,16 +122,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		139105B71AF99BAD00B5F7CC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				139105C11AF99BAD00B5F7CC /* libRCTSettings.a */,
-				3DAD3E901DF850E9000B6D8A /* libRCTSettings-tvOS.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		13B07FAE1A68108700A75B9A /* ReactNavigationRelay */ = {
+		13B07FAE1A68108700A75B9A /* EntriaApp */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -135,21 +133,35 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = ReactNavigationRelay;
+			name = EntriaApp;
 			sourceTree = "<group>";
 		};
-		
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				13C0E98A936D2C67AB3B4397 /* libPods-ReactNavigationRelay.a */,
-				2B6BB6B4FB67D5C68F131984 /* libPods-ReactNavigationRelay-tvOS.a */,
-				E4EE3CA358540C6588A43C1D /* libPods-ReactNavigationRelay-tvOSTests.a */,
-				BA56DAE8FEC4DD9958769C68 /* libPods-ReactNavigationRelayTests.a */,
+				39DD8BA20143BD7609A81B2C /* libPods-EntriaApp.a */,
+				F5347FFD9623729FDE27D57D /* libPods-EntriaApp-tvOS.a */,
+				209532EEA605B330E1241380 /* libPods-EntriaApp-tvOSTests.a */,
+				1F2B7529124575CE5E43F672 /* libPods-EntriaAppTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D8E5FA873BEDC787AC586EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1F0884C63D28D3482C34B1C /* Pods-EntriaApp.debug.xcconfig */,
+				BB549FB1A03E1FB98BF39222 /* Pods-EntriaApp.release.xcconfig */,
+				B0D002A8A7C125510D20048C /* Pods-EntriaApp-tvOS.debug.xcconfig */,
+				2927AB47C1105B46EA7AA394 /* Pods-EntriaApp-tvOS.release.xcconfig */,
+				C42BEE09536D849634C9B1E8 /* Pods-EntriaApp-tvOSTests.debug.xcconfig */,
+				993D4810822984F8E1830736 /* Pods-EntriaApp-tvOSTests.release.xcconfig */,
+				01D0ED52C9081443671F8711 /* Pods-EntriaAppTests.debug.xcconfig */,
+				61653E9E53D1101CF03A5D91 /* Pods-EntriaAppTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -162,11 +174,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* ReactNavigationRelay */,
+				13B07FAE1A68108700A75B9A /* EntriaApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* ReactNavigationRelayTests */,
+				00E356EF1AD99517003FC87E /* EntriaAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				6D8E5FA873BEDC787AC586EC /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -176,38 +189,22 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* ReactNavigationRelay.app */,
-				00E356EE1AD99517003FC87E /* ReactNavigationRelayTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* ReactNavigationRelay-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* ReactNavigationRelay-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* EntriaApp.app */,
+				00E356EE1AD99517003FC87E /* EntriaAppTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* EntriaApp-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* EntriaApp-tvOSTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C4E99EF1EB30928FD26DDEBC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6AF5590E88793E9F0724BF29 /* Pods-ReactNavigationRelay.debug.xcconfig */,
-				C778FEFB4E4E67A51106EF63 /* Pods-ReactNavigationRelay.release.xcconfig */,
-				778128343297948DDE8A84BD /* Pods-ReactNavigationRelay-tvOS.debug.xcconfig */,
-				BEC5334C2955F00D7A30D3BE /* Pods-ReactNavigationRelay-tvOS.release.xcconfig */,
-				274B59C7FF07057B66AB054E /* Pods-ReactNavigationRelay-tvOSTests.debug.xcconfig */,
-				69B912649B020BE63ECC68CD /* Pods-ReactNavigationRelay-tvOSTests.release.xcconfig */,
-				F6E89254B93143BE4310C4FD /* Pods-ReactNavigationRelayTests.debug.xcconfig */,
-				BFF01E887B105C928E205225 /* Pods-ReactNavigationRelayTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* ReactNavigationRelayTests */ = {
+		00E356ED1AD99517003FC87E /* EntriaAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactNavigationRelayTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "EntriaAppTests" */;
 			buildPhases = (
-				17D65E3CAA22C28D0D80FDF9 /* [CP] Check Pods Manifest.lock */,
+				741F6B55D196708ADC949C2E /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -217,16 +214,16 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = ReactNavigationRelayTests;
-			productName = ReactNavigationRelayTests;
-			productReference = 00E356EE1AD99517003FC87E /* ReactNavigationRelayTests.xctest */;
+			name = EntriaAppTests;
+			productName = EntriaAppTests;
+			productReference = 00E356EE1AD99517003FC87E /* EntriaAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* ReactNavigationRelay */ = {
+		13B07F861A680F5B00A75B9A /* EntriaApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ReactNavigationRelay" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "EntriaApp" */;
 			buildPhases = (
-				6722D6776CD335FD9D782CFF /* [CP] Check Pods Manifest.lock */,
+				0BBBA8DAA71B8C2B1B0E470A /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -237,16 +234,16 @@
 			);
 			dependencies = (
 			);
-			name = ReactNavigationRelay;
-			productName = "ReactNavigationRelay";
-			productReference = 13B07F961A680F5B00A75B9A /* ReactNavigationRelay.app */;
+			name = EntriaApp;
+			productName = EntriaApp;
+			productReference = 13B07F961A680F5B00A75B9A /* EntriaApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* ReactNavigationRelay-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* EntriaApp-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ReactNavigationRelay-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "EntriaApp-tvOS" */;
 			buildPhases = (
-				77C92D5F2271E2E70F2B6A16 /* [CP] Check Pods Manifest.lock */,
+				22C3E0FC53E7E1A838F29840 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -257,16 +254,16 @@
 			);
 			dependencies = (
 			);
-			name = "ReactNavigationRelay-tvOS";
-			productName = "ReactNavigationRelay-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* ReactNavigationRelay-tvOS.app */;
+			name = "EntriaApp-tvOS";
+			productName = "EntriaApp-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* EntriaApp-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* ReactNavigationRelay-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* EntriaApp-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ReactNavigationRelay-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "EntriaApp-tvOSTests" */;
 			buildPhases = (
-				D9F050E35473A25A0D6E665C /* [CP] Check Pods Manifest.lock */,
+				CB46BD53D437053EB72E4F2F /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -276,9 +273,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "ReactNavigationRelay-tvOSTests";
-			productName = "ReactNavigationRelay-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* ReactNavigationRelay-tvOSTests.xctest */;
+			name = "EntriaApp-tvOSTests";
+			productName = "EntriaApp-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* EntriaApp-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -287,12 +284,17 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = WBCPETEKCL;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = WBCPETEKCL;
+						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -305,11 +307,12 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ReactNavigationRelay" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "EntriaApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -318,10 +321,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* ReactNavigationRelay */,
-				00E356ED1AD99517003FC87E /* ReactNavigationRelayTests */,
-				2D02E47A1E0B4A5D006451C7 /* ReactNavigationRelay-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* ReactNavigationRelay-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* EntriaApp */,
+				00E356ED1AD99517003FC87E /* EntriaAppTests */,
+				2D02E47A1E0B4A5D006451C7 /* EntriaApp-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* EntriaApp-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -333,28 +336,6 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-		};
-		17D65E3CAA22C28D0D80FDF9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ReactNavigationRelayTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -380,7 +361,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -396,7 +376,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../../../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		0BBBA8DAA71B8C2B1B0E470A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EntriaApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22C3E0FC53E7E1A838F29840 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EntriaApp-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -410,7 +434,89 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../../../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		741F6B55D196708ADC949C2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EntriaAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB46BD53D437053EB72E4F2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EntriaApp-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD10A7F022414F080027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD10A7F122414F3F0027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -419,7 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* ReactNavigationRelayTests.m in Sources */,
+				00E356F31AD99517003FC87E /* EntriaAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* ReactNavigationRelayTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* EntriaAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,12 +560,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* ReactNavigationRelay */;
+			target = 13B07F861A680F5B00A75B9A /* EntriaApp */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* ReactNavigationRelay-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* EntriaApp-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -471,7 +577,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = ReactNavigationRelay;
+			path = EntriaApp;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -479,14 +585,16 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6E89254B93143BE4310C4FD /* Pods-ReactNavigationRelayTests.debug.xcconfig */;
+			baseConfigurationReference = 01D0ED52C9081443671F8711 /* Pods-EntriaAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = WBCPETEKCL;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = ReactNavigationRelayTests/Info.plist;
+				INFOPLIST_FILE = EntriaAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -496,17 +604,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactNavigationRelay.app/ReactNavigationRelay";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EntriaApp.app/EntriaApp";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFF01E887B105C928E205225 /* Pods-ReactNavigationRelayTests.release.xcconfig */;
+			baseConfigurationReference = 61653E9E53D1101CF03A5D91 /* Pods-EntriaAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = ReactNavigationRelayTests/Info.plist;
+				DEVELOPMENT_TEAM = WBCPETEKCL;
+				INFOPLIST_FILE = EntriaAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -516,52 +626,60 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactNavigationRelay.app/ReactNavigationRelay";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EntriaApp.app/EntriaApp";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AF5590E88793E9F0724BF29 /* Pods-ReactNavigationRelay.debug.xcconfig */;
+			baseConfigurationReference = F1F0884C63D28D3482C34B1C /* Pods-EntriaApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				INFOPLIST_FILE = ReactNavigationRelay/Info.plist;
+				DEVELOPMENT_TEAM = WBCPETEKCL;
+				INFOPLIST_FILE = EntriaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = ReactNavigationRelay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.entria.app;
+				PRODUCT_NAME = EntriaApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C778FEFB4E4E67A51106EF63 /* Pods-ReactNavigationRelay.release.xcconfig */;
+			baseConfigurationReference = BB549FB1A03E1FB98BF39222 /* Pods-EntriaApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = ReactNavigationRelay/Info.plist;
+				DEVELOPMENT_TEAM = WBCPETEKCL;
+				INFOPLIST_FILE = EntriaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = ReactNavigationRelay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.entria.app;
+				PRODUCT_NAME = EntriaApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 778128343297948DDE8A84BD /* Pods-ReactNavigationRelay-tvOS.debug.xcconfig */;
+			baseConfigurationReference = B0D002A8A7C125510D20048C /* Pods-EntriaApp-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -570,16 +688,17 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "ReactNavigationRelay-tvOS/Info.plist";
+				INFOPLIST_FILE = "EntriaApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ReactNavigationRelay-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.entria.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -589,7 +708,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEC5334C2955F00D7A30D3BE /* Pods-ReactNavigationRelay-tvOS.release.xcconfig */;
+			baseConfigurationReference = 2927AB47C1105B46EA7AA394 /* Pods-EntriaApp-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -599,15 +718,16 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "ReactNavigationRelay-tvOS/Info.plist";
+				INFOPLIST_FILE = "EntriaApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ReactNavigationRelay-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.entria.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -617,7 +737,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 274B59C7FF07057B66AB054E /* Pods-ReactNavigationRelay-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = C42BEE09536D849634C9B1E8 /* Pods-EntriaApp-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -627,24 +747,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "ReactNavigationRelay-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "EntriaApp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ReactNavigationRelay-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.EntriaApp-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactNavigationRelay-tvOS.app/ReactNavigationRelay-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EntriaApp-tvOS.app/EntriaApp-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69B912649B020BE63ECC68CD /* Pods-ReactNavigationRelay-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 993D4810822984F8E1830736 /* Pods-EntriaApp-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -654,17 +774,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "ReactNavigationRelay-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "EntriaApp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ReactNavigationRelay-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.EntriaApp-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactNavigationRelay-tvOS.app/ReactNavigationRelay-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EntriaApp-tvOS.app/EntriaApp-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -673,6 +793,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -726,6 +847,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -771,7 +893,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactNavigationRelayTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "EntriaAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -780,7 +902,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ReactNavigationRelay" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "EntriaApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -789,7 +911,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ReactNavigationRelay-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "EntriaApp-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -798,7 +920,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ReactNavigationRelay-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "EntriaApp-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -807,7 +929,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ReactNavigationRelay" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "EntriaApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
