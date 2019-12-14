@@ -106,7 +106,7 @@
     "lint": "eslint --ext .js packages/**",
     "lint:staged": "lint-staged",
     "start:android": "yarn workspace @entria/app android",
-    "start:restria": "yarn workspace @entria/server start",
+    "start:restria": "yarn workspace @entria/restria start",
     "start:server": "yarn workspace @entria/server start",
     "test": "jest --coverage",
     "web:relay": "yarn workspace @entria/web relay",
