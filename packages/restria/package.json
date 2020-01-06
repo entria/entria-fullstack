@@ -71,6 +71,7 @@
     ]
   },
   "main": "index.js",
+  "pre-commit": "lint:staged",
   "private": true,
   "repository": {
     "type": "git",
