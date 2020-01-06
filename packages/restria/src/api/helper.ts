@@ -1,11 +1,13 @@
-// @flow
-
 import jwt from 'jsonwebtoken';
 // import { User } from '../models';
 import { jwtSecret } from '../common/config';
 import { validLoginTokenScopes } from '../common/consts';
 
-import type { LocationHeaders } from '../TypeDefinition';
+type LocationHeaders = {
+  longitude: string;
+  latitude: string;
+  locationtimestamp: string;
+};
 
 /**
  * Return user and seller given a JWT token
