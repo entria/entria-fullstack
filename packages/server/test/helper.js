@@ -1,13 +1,9 @@
-// @flow
-
 import mongoose from 'mongoose';
 
 import * as loaders from '../src/loader';
 import * as _createRows from './createRows';
 
 export const createRows = _createRows;
-
-const { ObjectId } = mongoose.Types;
 
 // ensure the NODE_ENV is set to 'test'
 // this is helpful when you would like to change behavior when testing
@@ -65,7 +61,7 @@ export async function clearDbAndRestartCounters() {
   createRows.restartCounters();
 }
 
-export function getContext(context: Object) {
+export function getContext(context) {
   const dataloaders = Object.keys(loaders).reduce(
     (prev, loaderKey) => ({
       ...prev,
