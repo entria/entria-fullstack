@@ -11,7 +11,9 @@ const outputPath = resolve(__dirname, 'dist');
 const entry = isDev ? ['./src/index.tsx', 'webpack-plugin-serve/client'] : './src/index.tsx';
 
 const plugins = [
-  new HtmlWebpackPlugin(),
+  new HtmlWebpackPlugin({
+    template: './template.html'
+  }),
   new webpack.DefinePlugin({
     'process.env': {
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
@@ -24,12 +26,22 @@ if (isDev) {
     new Serve({
       hmr: true,
       historyFallback: true,
-      static: [outputPath],
+      static: [outputPath, resolve(__dirname, 'dist-dll')],
     }),
   );
 } else {
   plugins.push(new MiniCssExtractPlugin());
 }
+
+plugins.push(new webpack.DllReferencePlugin({
+  manifest: require('./dist-dll/ReactStuff.json'),
+  context: process.cwd()
+}))
+
+plugins.push(new webpack.DllReferencePlugin({
+  manifest: require('./dist-dll/Styles.json'),
+  context: process.cwd()
+}))
 
 module.exports = {
   entry,

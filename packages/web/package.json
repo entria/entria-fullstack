@@ -66,12 +66,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "prebuild": "yarn build deps",
     "build": "cross-env NODE_ENV=production wp --config ./webpack.config",
     "jest:lint": "jest --config jest-eslint.config.js",
     "now-build": "cross-env NODE_ENV=production wp --config ./webpack.config",
     "relay": "relay-compiler --watchman false --src ./src --schema ../server/data/schema.graphql --language typescript",
     "start": "cross-env NODE_ENV=development wp --config ./webpack.config",
     "test": "jest --coverage",
-    "ts:check": "tsc"
+    "ts:check": "tsc",
+    "build:deps": "cross-env NODE_ENV=production wp --config ./webpack.deps.config.js"
   }
 }
