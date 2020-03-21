@@ -20,12 +20,12 @@ yarn start:server
 ### Run Web Package
 Compile Relay
 ```
-yarn relay:web
+yarn web:relay
 ```
 
 Start Package
 ```
-yarn start:web
+yarn web:start
 ```
 
 ### Run App Package
@@ -33,10 +33,10 @@ We recommend that you read https://facebook.github.io/react-native/docs/getting-
 
 Compile Relay
 ```
-yarn relay:app
+yarn app:relay
 ```
 
 Start Package
 ```
-yarn start:app
+yarn app:start
 ```
