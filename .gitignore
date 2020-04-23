@@ -38,3 +38,6 @@ cypress/videos
 cypress/screenshots
 
 !debug.keystore
+
+# Expo
+.expo

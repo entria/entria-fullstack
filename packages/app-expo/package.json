@@ -1,0 +1,33 @@
+{
+  "name": "@entria/app-expo",
+  "version": "0.0.1",
+  "main": "__generated__/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo android",
+    "ios": "expo ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "postinstall": "expo-yarn-workspaces postinstall"
+  },
+  "dependencies": {
+    "expo": "~37.0.3",
+    "expo-asset": "^8.1.4",
+    "expo-keep-awake": "^8.1.0",
+    "react": "~16.9.0",
+    "react-dom": "~16.9.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
+    "react-native-screens": "~2.2.0",
+    "react-native-web": "~0.11.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@types/react": "~16.9.23",
+    "@types/react-native": "~0.61.17",
+    "babel-preset-expo": "~8.1.0",
+    "expo-cli": "^3.18.6",
+    "expo-yarn-workspaces": "^1.2.1",
+    "typescript": "~3.8.3"
+  },
+  "private": true
+}
