@@ -116,5 +116,8 @@
     "packages": [
       "packages/*"
     ]
+  },
+  "dependencies": {
+    "metro-config": "^0.59.0"
   }
 }
