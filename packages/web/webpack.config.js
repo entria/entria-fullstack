@@ -34,7 +34,7 @@ if (isDev) {
 module.exports = {
   entry,
   mode: process.env.NODE_ENV,
-  devtool: 'cheap-eval-source-map',
+  devtool: 'eval-cheap-source-map',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },

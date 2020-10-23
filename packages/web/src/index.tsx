@@ -8,4 +8,4 @@ import App from './App';
 const root = document.createElement('div');
 document.body.appendChild(root);
 
-ReactDOM.createRoot(root).render(<App />);
+ReactDOM.unstable_createRoot(root).render(<App />);
