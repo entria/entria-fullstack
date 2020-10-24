@@ -39,8 +39,8 @@ describe('<UserList />', () => {
   it('should render success UserList', async () => {
     const { getByText } = render(<UserListDefault />);
 
-    Environment.mock.resolveMostRecentOperation(operation =>{
-      const payload = MockPayloadGenerator.generate(operation, {
+    Environment.mock.resolveMostRecentOperation(operation =>
+      MockPayloadGenerator.generate(operation, {
         PageInfo() {
           return {
             hasNextPage: false,
@@ -70,12 +70,7 @@ describe('<UserList />', () => {
           ]
         }
       })
-
-      console.log(payload.data.users.pageInfo.hasPreviousPage);
-
-      return payload;
-
-    });
+    );
 
     expect(getByText('ID: Q2xpZW50OjE=')).toBeTruthy();
     expect(getByText('User: Adhis Yudha')).toBeTruthy();
