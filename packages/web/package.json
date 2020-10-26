@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "dependencies": {
     "hoist-non-react-statics": "^3.0.1",
-    "react": "^0.0.0-experimental-4ead6b530",
+    "react": "^17.0.1",
     "react-dom": "^0.0.0-experimental-4ead6b530",
     "react-relay": "^0.0.0-experimental-183bdd28",
     "rebass": "^4.0.2",
