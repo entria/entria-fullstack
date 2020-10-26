@@ -1,4 +1,3 @@
-const { resolve } = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const WebpackNodeExternals = require('webpack-node-externals');
@@ -15,7 +14,7 @@ module.exports = merge.smart(common, {
   },
   externals: [
     WebpackNodeExternals({
-      whitelist: ['webpack/hot/poll?1000'],
+      allowlist: ['webpack/hot/poll?1000'],
     }),
   ],
   plugins: [
