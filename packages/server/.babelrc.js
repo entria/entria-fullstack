@@ -1,3 +1,5 @@
+require("@babel/register")({extensions: ['.js', '.ts', '.es6', '.es', '.mjs', '.jsx']})
+
 module.exports = {
   presets: [
     [
