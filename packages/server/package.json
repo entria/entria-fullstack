@@ -105,7 +105,7 @@
     "precommit": "lint-staged",
     "prettier": "prettier --write --single-quote true --trailing-comma all --print-width 120",
     "repl": "nodemon --config ./repl/nodemon.json ./repl.js --exec babel-node",
-    "start": "nodemon --exec babel-node src/index.js",
+    "start": "nodemon --watch 'src/**/*' -e ts,tsx --exec babel-node ./src/index.js",
     "server:start": "nodemon dist/index.js",
     "server:build": "npm run clear && webpack --env dev",
     "test": "jest",
